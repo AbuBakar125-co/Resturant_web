@@ -31,6 +31,6 @@ jobs:
           username: u990703575.abubakar.backendz.co
           password: "-pl,_PL<0okm)OKM"
           port: 21
-          local-dir: ./out/
+          local-dir: ./dist/
           server-dir: /public_html/
           dangerous-clean-slate: false
