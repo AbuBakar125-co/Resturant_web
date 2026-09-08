@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { PageRoute, ContactFormData } from '../types';
 import { RESTAURANT_INFO } from '../data/restaurantData';
 import { useTheme } from '../context/ThemeContext';
+import { PageHero } from '../components/PageHero';
 import {
   Phone,
   Mail,
@@ -13,7 +14,8 @@ import {
   Send,
   Navigation,
   ShieldCheck,
-  Car
+  Car,
+  Sparkles
 } from 'lucide-react';
 
 interface ContactPageProps {
@@ -21,7 +23,7 @@ interface ContactPageProps {
   onOpenReservation: () => void;
 }
 
-export const ContactPage: React.FC<ContactPageProps> = () => {
+export const ContactPage: React.FC<ContactPageProps> = ({ onNavigate }) => {
   const { isDark } = useTheme();
   const goldAccent = isDark ? '#C5A059' : '#A67C00';
 
@@ -81,72 +83,22 @@ export const ContactPage: React.FC<ContactPageProps> = () => {
 
   return (
     <div
-      className={`pt-24 transition-colors duration-400 ${
+      className={`transition-colors duration-400 ${
         isDark ? 'bg-[#0C0D0E] text-[#EDE6D8]' : 'bg-[#FAF8F3] text-[#171717]'
       }`}
     >
       {/* 1. HERO SECTION */}
-      <section
-        className={`relative py-20 sm:py-28 overflow-hidden border-b transition-colors duration-400 ${
-          isDark ? 'border-[#1C1F25]' : 'border-[#E2D9CA]'
-        }`}
-      >
-        <div className="absolute inset-0 z-0 opacity-20">
-          <img
-            src="https://images.unsplash.com/photo-1550966871-3ed3cdb5ed0c?q=80&w=2000&auto=format&fit=crop"
-            alt="Maison Ember Concierge"
-            className="img-kenburns w-full h-full object-cover"
-          />
-          <div
-            className={`absolute inset-0 ${
-              isDark
-                ? 'bg-gradient-to-t from-[#0C0D0E] via-[#0C0D0E]/80 to-black/70'
-                : 'bg-gradient-to-t from-[#FAF8F3] via-[#FAF8F3]/85 to-white/70'
-            }`}
-          />
-        </div>
-
-        <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-4" data-reveal-group>
-          <div
-            data-reveal="up"
-            className={`inline-flex items-center gap-2 px-3.5 py-1 rounded-full border backdrop-blur-md ${
-              isDark
-                ? 'border-[#C5A059]/40 bg-[#16181D]/80 text-[#C5A059]'
-                : 'border-[#A67C00]/40 bg-white/80 text-[#A67C00] shadow-sm'
-            }`}
-          >
-            <span className="text-xs uppercase tracking-[0.25em] font-medium">
-              Guest Concierge
-            </span>
-          </div>
-
-          <h1
-            data-reveal="up"
-            className={`font-serif text-4xl sm:text-6xl lg:text-7xl font-bold tracking-tight ${
-              isDark ? 'text-[#EDE6D8]' : 'text-[#171717]'
-            }`}
-          >
-            Let&apos;s Make Your Visit Memorable
-          </h1>
-
-          <p
-            data-reveal="up"
-            className="font-serif italic text-xl sm:text-2xl max-w-2xl mx-auto"
-            style={{ color: goldAccent }}
-          >
-            &ldquo;{RESTAURANT_INFO.tagline}&rdquo;
-          </p>
-
-          <p
-            data-reveal="fade"
-            className={`text-sm sm:text-base max-w-xl mx-auto leading-relaxed font-light ${
-              isDark ? 'text-[#B8B0A2]' : 'text-[#57534E]'
-            }`}
-          >
-            Our guest relation team is at your disposal for table bookings, private dining inquiries, dietary arrangements, and special requests.
-          </p>
-        </div>
-      </section>
+      <PageHero
+        image="https://images.unsplash.com/photo-1550966871-3ed3cdb5ed0c?q=80&w=2000&auto=format&fit=crop"
+        imageAlt="Warmly lit, welcoming dining room with natural light and elegantly set tables"
+        badgeIcon={<Sparkles className="w-3.5 h-3.5" />}
+        badgeLabel="Guest Concierge"
+        title="Let's Make Your Visit Memorable"
+        quote={RESTAURANT_INFO.tagline}
+        description="Our guest relation team is at your disposal for table bookings, private dining inquiries, dietary arrangements, and special requests."
+        breadcrumbLabel="Contact"
+        onNavigate={onNavigate}
+      />
 
       {/* 2. CONTACT INFO & RESERVATION FORM */}
       <section className="py-20 sm:py-28">

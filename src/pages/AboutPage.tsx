@@ -2,7 +2,8 @@ import React from 'react';
 import { PageRoute } from '../types';
 import { CHEF_PROFILE, VALUES_LIST } from '../data/restaurantData';
 import { useTheme } from '../context/ThemeContext';
-import { Award, Flame, HeartHandshake, Sparkles, ChefHat, Compass, ArrowRight } from 'lucide-react';
+import { PageHero } from '../components/PageHero';
+import { Award, Flame, HeartHandshake, Sparkles, ChefHat, Compass, ArrowRight, BookOpen } from 'lucide-react';
 
 interface AboutPageProps {
   onNavigate: (page: PageRoute) => void;
@@ -43,72 +44,22 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onNavigate, onOpenReservat
 
   return (
     <div
-      className={`pt-24 transition-colors duration-400 ${
+      className={`transition-colors duration-400 ${
         isDark ? 'bg-[#0C0D0E] text-[#EDE6D8]' : 'bg-[#FAF8F3] text-[#171717]'
       }`}
     >
       {/* 1. HERO SECTION */}
-      <section
-        className={`relative py-20 sm:py-32 overflow-hidden border-b transition-colors duration-400 ${
-          isDark ? 'border-[#1C1E24]' : 'border-[#E2D9CA]'
-        }`}
-      >
-        <div className="absolute inset-0 z-0 opacity-25">
-          <img
-            src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=2000&auto=format&fit=crop"
-            alt="Maison Ember Architecture"
-            className="img-kenburns w-full h-full object-cover"
-          />
-          <div
-            className={`absolute inset-0 ${
-              isDark
-                ? 'bg-gradient-to-t from-[#0C0D0E] via-[#0C0D0E]/80 to-black/70'
-                : 'bg-gradient-to-t from-[#FAF8F3] via-[#FAF8F3]/85 to-white/70'
-            }`}
-          />
-        </div>
-
-        <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-4" data-reveal-group>
-          <div
-            data-reveal="up"
-            className={`inline-flex items-center gap-2 px-3.5 py-1 rounded-full border backdrop-blur-md ${
-              isDark
-                ? 'border-[#C5A059]/40 bg-[#16181D]/80 text-[#C5A059]'
-                : 'border-[#A67C00]/40 bg-white/80 text-[#A67C00] shadow-sm'
-            }`}
-          >
-            <span className="text-xs uppercase tracking-[0.25em] font-medium">
-              About Maison Ember
-            </span>
-          </div>
-
-          <h1
-            data-reveal="up"
-            className={`font-serif text-4xl sm:text-6xl lg:text-7xl font-bold tracking-tight ${
-              isDark ? 'text-[#EDE6D8]' : 'text-[#171717]'
-            }`}
-          >
-            Our Story
-          </h1>
-
-          <p
-            data-reveal="up"
-            className="font-serif italic text-xl sm:text-2xl max-w-2xl mx-auto"
-            style={{ color: goldAccent }}
-          >
-            &ldquo;Where Every Bite Becomes a Memory.&rdquo;
-          </p>
-
-          <p
-            data-reveal="fade"
-            className={`text-sm sm:text-base max-w-xl mx-auto leading-relaxed font-light ${
-              isDark ? 'text-[#B8B0A2]' : 'text-[#57534E]'
-            }`}
-          >
-            Founded on a passion for open-fire culinary heritage, rare cellar vintages, and heartfelt human connection in the heart of the city.
-          </p>
-        </div>
-      </section>
+      <PageHero
+        image="https://images.unsplash.com/photo-1577219491135-ce391730fb2c?q=80&w=2000&auto=format&fit=crop"
+        imageAlt="Chef Julien Moreau plating a dish with precision under warm kitchen light"
+        badgeIcon={<BookOpen className="w-3.5 h-3.5" />}
+        badgeLabel="About Maison Ember"
+        title="Our Story"
+        quote="Where Every Bite Becomes a Memory."
+        description="Founded on a passion for open-fire culinary heritage, rare cellar vintages, and heartfelt human connection in the heart of the city."
+        breadcrumbLabel="About"
+        onNavigate={onNavigate}
+      />
 
       {/* 2. OUR BEGINNING */}
       <section className="py-24 sm:py-32">

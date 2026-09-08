@@ -2,6 +2,7 @@ import React, { useState, useMemo } from 'react';
 import { PageRoute, MenuItem } from '../types';
 import { FULL_MENU } from '../data/restaurantData';
 import { useTheme } from '../context/ThemeContext';
+import { PageHero } from '../components/PageHero';
 import {
   Search,
   Flame,
@@ -72,72 +73,22 @@ export const MenuPage: React.FC<MenuPageProps> = ({ onNavigate, onOpenReservatio
 
   return (
     <div
-      className={`pt-24 transition-colors duration-400 ${
+      className={`transition-colors duration-400 ${
         isDark ? 'bg-[#0C0D0E] text-[#EDE6D8]' : 'bg-[#FAF8F3] text-[#171717]'
       }`}
     >
       {/* 1. HERO SECTION */}
-      <section
-        className={`relative py-20 sm:py-28 overflow-hidden border-b transition-colors duration-400 ${
-          isDark ? 'border-[#1C1F25]' : 'border-[#E2D9CA]'
-        }`}
-      >
-        <div className="absolute inset-0 z-0 opacity-20">
-          <img
-            src="https://images.unsplash.com/photo-1544025162-d76694265947?q=80&w=2000&auto=format&fit=crop"
-            alt="Maison Ember Kitchen Craft"
-            className="img-kenburns w-full h-full object-cover"
-          />
-          <div
-            className={`absolute inset-0 ${
-              isDark
-                ? 'bg-gradient-to-t from-[#0C0D0E] via-[#0C0D0E]/80 to-black/70'
-                : 'bg-gradient-to-t from-[#FAF8F3] via-[#FAF8F3]/85 to-white/70'
-            }`}
-          />
-        </div>
-
-        <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-4" data-reveal-group>
-          <div
-            data-reveal="up"
-            className={`inline-flex items-center gap-2 px-3.5 py-1 rounded-full border backdrop-blur-md ${
-              isDark
-                ? 'border-[#C5A059]/40 bg-[#16181D]/80 text-[#C5A059]'
-                : 'border-[#A67C00]/40 bg-white/80 text-[#A67C00] shadow-sm'
-            }`}
-          >
-            <span className="text-xs uppercase tracking-[0.25em] font-medium">
-              Seasonal Carte Du Jour
-            </span>
-          </div>
-
-          <h1
-            data-reveal="up"
-            className={`font-serif text-4xl sm:text-6xl lg:text-7xl font-bold tracking-tight ${
-              isDark ? 'text-[#EDE6D8]' : 'text-[#171717]'
-            }`}
-          >
-            The Tasting &amp; À La Carte Menu
-          </h1>
-
-          <p
-            data-reveal="up"
-            className="font-serif italic text-xl sm:text-2xl max-w-2xl mx-auto"
-            style={{ color: goldAccent }}
-          >
-            &ldquo;Timeless flavors, thoughtfully reimagined.&rdquo;
-          </p>
-
-          <p
-            data-reveal="fade"
-            className={`text-sm sm:text-base max-w-xl mx-auto leading-relaxed font-light ${
-              isDark ? 'text-[#B8B0A2]' : 'text-[#57534E]'
-            }`}
-          >
-            Each dish is seasoned with elements of wood smoke, garden herbs, and old-world cellar pairings. Sourced from regenerative regional purveyors.
-          </p>
-        </div>
-      </section>
+      <PageHero
+        image="https://images.unsplash.com/photo-1611270629569-8b357cb88da9?q=80&w=2000&auto=format&fit=crop"
+        imageAlt="Overhead view of house truffle tagliolini, elegantly plated with shaved black truffle"
+        badgeIcon={<Utensils className="w-3.5 h-3.5" />}
+        badgeLabel="Seasonal Carte Du Jour"
+        title="The Tasting & À La Carte Menu"
+        quote="Timeless flavors, thoughtfully reimagined."
+        description="Each dish is seasoned with elements of wood smoke, garden herbs, and old-world cellar pairings. Sourced from regenerative regional purveyors."
+        breadcrumbLabel="Menu"
+        onNavigate={onNavigate}
+      />
 
       {/* 2. FILTER CONTROLS & SEARCH */}
       <section

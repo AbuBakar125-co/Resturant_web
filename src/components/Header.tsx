@@ -48,12 +48,13 @@ export const Header: React.FC<HeaderProps> = ({
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
-  // Header styling when scrolled vs transparent top
+  // Header styling when scrolled vs transparent top (no overlay at rest —
+  // the underlying hero art supplies its own contrast scrim)
   const headerBgClass = isScrolled
     ? isDark
       ? 'bg-[#0C0D0E]/95 backdrop-blur-md py-3.5 border-b border-[#25282C]/70 shadow-2xl shadow-black/40'
       : 'bg-[#FAF8F3]/95 backdrop-blur-md py-3.5 border-b border-[#E8E2D6] shadow-sm shadow-black/5'
-    : 'bg-gradient-to-b from-black/80 via-black/40 to-transparent py-5';
+    : 'bg-transparent py-5';
 
   const logoTextClass = isScrolled && !isDark
     ? 'text-[#171717] group-hover:text-[#A67C00]'

@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { PageRoute, ServiceItem } from '../types';
 import { SERVICES_LIST, RESTAURANT_INFO } from '../data/restaurantData';
 import { useTheme } from '../context/ThemeContext';
+import { PageHero } from '../components/PageHero';
 import {
   UtensilsCrossed,
   Crown,
@@ -14,7 +15,8 @@ import {
   X,
   Phone,
   ArrowRight,
-  Mail
+  Mail,
+  Sparkles
 } from 'lucide-react';
 
 interface ServicesPageProps {
@@ -48,67 +50,28 @@ export const ServicesPage: React.FC<ServicesPageProps> = ({ onNavigate, onOpenRe
 
   return (
     <div
-      className={`pt-24 transition-colors duration-400 ${
+      className={`transition-colors duration-400 ${
         isDark ? 'bg-[#0C0D0E] text-[#EDE6D8]' : 'bg-[#FAF8F3] text-[#171717]'
       }`}
     >
       {/* 1. HERO SECTION */}
-      <section
-        className={`relative py-20 sm:py-32 overflow-hidden border-b transition-colors duration-400 ${
-          isDark ? 'border-[#1C1F25]' : 'border-[#E2D9CA]'
-        }`}
-      >
-        <div className="absolute inset-0 z-0 opacity-25">
-          <img
-            src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?q=80&w=2000&auto=format&fit=crop"
-            alt="Maison Ember Event Atmosphere"
-            className="img-kenburns w-full h-full object-cover"
-          />
-          <div
-            className={`absolute inset-0 ${
-              isDark
-                ? 'bg-gradient-to-t from-[#0C0D0E] via-[#0C0D0E]/80 to-black/70'
-                : 'bg-gradient-to-t from-[#FAF8F3] via-[#FAF8F3]/85 to-white/70'
-            }`}
-          />
-        </div>
-
-        <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-4" data-reveal-group>
-          <div
-            data-reveal="up"
-            className={`inline-flex items-center gap-2 px-3.5 py-1 rounded-full border backdrop-blur-md ${
-              isDark
-                ? 'border-[#C5A059]/40 bg-[#16181D]/80 text-[#C5A059]'
-                : 'border-[#A67C00]/40 bg-white/80 text-[#A67C00] shadow-sm'
-            }`}
-          >
-            <span className="text-xs uppercase tracking-[0.25em] font-medium">
-              Hospitality &amp; Gatherings
-            </span>
-          </div>
-
-          <h1
-            data-reveal="up"
-            className={`font-serif text-4xl sm:text-6xl lg:text-7xl font-bold tracking-tight ${
-              isDark ? 'text-[#EDE6D8]' : 'text-[#171717]'
-            }`}
-          >
+      <PageHero
+        image="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?q=80&w=2000&auto=format&fit=crop"
+        imageAlt="An elegant long fine-dining table set with crystal glassware and fresh floral arrangements"
+        badgeIcon={<Sparkles className="w-3.5 h-3.5" />}
+        badgeLabel="Hospitality & Gatherings"
+        title={
+          <>
             Exceptional Dining, <br className="hidden sm:inline" />
             <span className="italic" style={{ color: goldAccent }}>
               Every Occasion
             </span>
-          </h1>
-
-          <p
-            data-reveal="fade"
-            className={`text-sm sm:text-base max-w-2xl mx-auto leading-relaxed font-light ${
-              isDark ? 'text-[#B8B0A2]' : 'text-[#57534E]'
-            }`}
-          >
-            Whether an intimate dinner for two, a landmark birthday, or an exclusive restaurant buyout, we craft bespoke culinary experiences tailored to your vision.
-          </p>
-        </div>
-      </section>
+          </>
+        }
+        description="Whether an intimate dinner for two, a landmark birthday, or an exclusive restaurant buyout, we craft bespoke culinary experiences tailored to your vision."
+        breadcrumbLabel="Services"
+        onNavigate={onNavigate}
+      />
 
       {/* 2. SERVICES GRID */}
       <section className="py-24 sm:py-32">
