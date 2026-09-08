@@ -1,0 +1,1306 @@
+{
+  "doc": {
+    "height": 13137,
+    "vh": 900,
+    "acts": [
+      "pin",
+      "flow",
+      "pin",
+      "pan",
+      "flow",
+      "pin"
+    ],
+    "world": null
+  },
+  "report": [
+    {
+      "i": 0,
+      "y": 32,
+      "pct": 0,
+      "settled": true,
+      "contrast": [
+        {
+          "t": "Fine Dining · City Center Where every bi",
+          "dir": "light-on-dark",
+          "worst": 4.93,
+          "mean": 15.1
+        }
+      ],
+      "cues": [
+        {
+          "t": "Fine Dining · City Center Where every bite bec",
+          "o": 1
+        }
+      ],
+      "clips": [],
+      "rails": [
+        0
+      ],
+      "wipes": [
+        "none"
+      ],
+      "act": "pin",
+      "stages": [
+        0,
+        3252,
+        7392,
+        12025
+      ],
+      "segs": [],
+      "custom": [],
+      "customHold": false,
+      "seg": null,
+      "segp": null,
+      "bg": "rgb(11,8,5)"
+    },
+    {
+      "i": 1,
+      "y": 343,
+      "pct": 3,
+      "settled": true,
+      "contrast": [
+        {
+          "t": "Fine Dining · City Center Where every bi",
+          "dir": "light-on-dark",
+          "worst": 5.27,
+          "mean": 15.27
+        }
+      ],
+      "cues": [
+        {
+          "t": "Fine Dining · City Center Where every bite bec",
+          "o": 1
+        }
+      ],
+      "clips": [],
+      "rails": [
+        0
+      ],
+      "wipes": [
+        "none"
+      ],
+      "act": "pin",
+      "stages": [
+        0,
+        2941,
+        7081,
+        11714
+      ],
+      "segs": [],
+      "custom": [],
+      "customHold": false,
+      "seg": null,
+      "segp": null,
+      "bg": "rgb(11,8,5)"
+    },
+    {
+      "i": 2,
+      "y": 654,
+      "pct": 5,
+      "settled": true,
+      "contrast": [
+        {
+          "t": "Fine Dining · City Center Where every bi",
+          "dir": "light-on-dark",
+          "worst": 6.35,
+          "mean": 15.39
+        }
+      ],
+      "cues": [
+        {
+          "t": "Fine Dining · City Center Where every bite bec",
+          "o": 1
+        }
+      ],
+      "clips": [],
+      "rails": [
+        0
+      ],
+      "wipes": [
+        "none"
+      ],
+      "act": "pin",
+      "stages": [
+        0,
+        2630,
+        6770,
+        11403
+      ],
+      "segs": [],
+      "custom": [],
+      "customHold": false,
+      "seg": null,
+      "segp": null,
+      "bg": "rgb(11,8,5)"
+    },
+    {
+      "i": 3,
+      "y": 966,
+      "pct": 8,
+      "settled": true,
+      "contrast": [
+        {
+          "t": "Fine Dining · City Center Where every bi",
+          "dir": "light-on-dark",
+          "worst": 6.65,
+          "mean": 15.59
+        }
+      ],
+      "cues": [
+        {
+          "t": "Fine Dining · City Center Where every bite bec",
+          "o": 1
+        }
+      ],
+      "clips": [],
+      "rails": [
+        0
+      ],
+      "wipes": [
+        "none"
+      ],
+      "act": "pin",
+      "stages": [
+        0,
+        2318,
+        6458,
+        11091
+      ],
+      "segs": [],
+      "custom": [],
+      "customHold": false,
+      "seg": null,
+      "segp": null,
+      "bg": "rgb(11,8,5)"
+    },
+    {
+      "i": 4,
+      "y": 1277,
+      "pct": 10,
+      "settled": true,
+      "contrast": [],
+      "cues": [
+        {
+          "t": "Fine Dining · City Center Where every bite bec",
+          "o": 0.2
+        }
+      ],
+      "clips": [],
+      "rails": [
+        0
+      ],
+      "wipes": [
+        "none"
+      ],
+      "act": "pin",
+      "stages": [
+        0,
+        2007,
+        6147,
+        10780
+      ],
+      "segs": [],
+      "custom": [],
+      "customHold": false,
+      "seg": null,
+      "segp": null,
+      "bg": "rgb(11,8,5)"
+    },
+    {
+      "i": 5,
+      "y": 1588,
+      "pct": 13,
+      "settled": true,
+      "contrast": [],
+      "cues": [],
+      "clips": [],
+      "rails": [
+        0
+      ],
+      "wipes": [
+        "none"
+      ],
+      "act": "pin",
+      "stages": [
+        0,
+        1696,
+        5836,
+        10469
+      ],
+      "segs": [],
+      "custom": [],
+      "customHold": false,
+      "seg": null,
+      "segp": null,
+      "bg": "rgb(11,8,5)"
+    },
+    {
+      "i": 6,
+      "y": 1653,
+      "pct": 14,
+      "settled": true,
+      "contrast": [],
+      "cues": [],
+      "clips": [],
+      "rails": [
+        0
+      ],
+      "wipes": [
+        "none"
+      ],
+      "act": "pin",
+      "stages": [
+        -33,
+        1631,
+        5771,
+        10404
+      ],
+      "segs": [],
+      "custom": [],
+      "customHold": false,
+      "seg": null,
+      "segp": null,
+      "bg": "rgb(11,8,5)"
+    },
+    {
+      "i": 7,
+      "y": 1973,
+      "pct": 16,
+      "settled": true,
+      "contrast": [],
+      "cues": [],
+      "clips": [],
+      "rails": [
+        0
+      ],
+      "wipes": [
+        "none"
+      ],
+      "act": "pin",
+      "stages": [
+        -353,
+        1311,
+        5451,
+        10084
+      ],
+      "segs": [],
+      "custom": [],
+      "customHold": false,
+      "seg": null,
+      "segp": null,
+      "bg": "rgb(18,11,7)"
+    },
+    {
+      "i": 8,
+      "y": 2292,
+      "pct": 19,
+      "settled": true,
+      "contrast": [],
+      "cues": [],
+      "clips": [],
+      "rails": [
+        0
+      ],
+      "wipes": [
+        "none"
+      ],
+      "act": "flow",
+      "stages": [
+        -672,
+        992,
+        5132,
+        9765
+      ],
+      "segs": [],
+      "custom": [],
+      "customHold": false,
+      "seg": null,
+      "segp": null,
+      "bg": "rgb(21,13,8)"
+    },
+    {
+      "i": 9,
+      "y": 2612,
+      "pct": 21,
+      "settled": true,
+      "contrast": [],
+      "cues": [],
+      "clips": [],
+      "rails": [
+        0
+      ],
+      "wipes": [
+        "none"
+      ],
+      "act": "flow",
+      "stages": [
+        -992,
+        672,
+        4812,
+        9445
+      ],
+      "segs": [],
+      "custom": [],
+      "customHold": false,
+      "seg": null,
+      "segp": null,
+      "bg": "rgb(21,13,8)"
+    },
+    {
+      "i": 10,
+      "y": 2931,
+      "pct": 24,
+      "settled": true,
+      "contrast": [],
+      "cues": [],
+      "clips": [],
+      "rails": [
+        0
+      ],
+      "wipes": [
+        "none"
+      ],
+      "act": "pin",
+      "stages": [
+        -1311,
+        353,
+        4493,
+        9126
+      ],
+      "segs": [],
+      "custom": [],
+      "customHold": false,
+      "seg": null,
+      "segp": null,
+      "bg": "rgb(21,13,8)"
+    },
+    {
+      "i": 11,
+      "y": 3251,
+      "pct": 27,
+      "settled": true,
+      "contrast": [],
+      "cues": [],
+      "clips": [],
+      "rails": [
+        0
+      ],
+      "wipes": [
+        "none"
+      ],
+      "act": "pin",
+      "stages": [
+        -1631,
+        33,
+        4173,
+        8806
+      ],
+      "segs": [],
+      "custom": [],
+      "customHold": false,
+      "seg": null,
+      "segp": null,
+      "bg": "rgb(21,13,8)"
+    },
+    {
+      "i": 12,
+      "y": 3349,
+      "pct": 27,
+      "settled": true,
+      "contrast": [],
+      "cues": [],
+      "clips": [],
+      "rails": [
+        0
+      ],
+      "wipes": [
+        "none"
+      ],
+      "act": "pin",
+      "stages": [
+        -1729,
+        0,
+        4075,
+        8708
+      ],
+      "segs": [],
+      "custom": [],
+      "customHold": false,
+      "seg": null,
+      "segp": null,
+      "bg": "rgb(21,13,8)"
+    },
+    {
+      "i": 13,
+      "y": 3971,
+      "pct": 32,
+      "settled": true,
+      "contrast": [],
+      "cues": [],
+      "clips": [],
+      "rails": [
+        0
+      ],
+      "wipes": [
+        "none"
+      ],
+      "act": "pin",
+      "stages": [
+        -2351,
+        0,
+        3453,
+        8086
+      ],
+      "segs": [],
+      "custom": [],
+      "customHold": false,
+      "seg": null,
+      "segp": null,
+      "bg": "rgb(25,14,8)"
+    },
+    {
+      "i": 14,
+      "y": 4593,
+      "pct": 38,
+      "settled": true,
+      "contrast": [],
+      "cues": [],
+      "clips": [],
+      "rails": [
+        0
+      ],
+      "wipes": [
+        "none"
+      ],
+      "act": "pin",
+      "stages": [
+        -2973,
+        0,
+        2831,
+        7464
+      ],
+      "segs": [],
+      "custom": [],
+      "customHold": false,
+      "seg": null,
+      "segp": null,
+      "bg": "rgb(27,15,8)"
+    },
+    {
+      "i": 15,
+      "y": 5215,
+      "pct": 43,
+      "settled": true,
+      "contrast": [],
+      "cues": [],
+      "clips": [],
+      "rails": [
+        0
+      ],
+      "wipes": [
+        "none"
+      ],
+      "act": "pin",
+      "stages": [
+        -3595,
+        0,
+        2209,
+        6842
+      ],
+      "segs": [],
+      "custom": [],
+      "customHold": false,
+      "seg": null,
+      "segp": null,
+      "bg": "rgb(27,15,8)"
+    },
+    {
+      "i": 16,
+      "y": 5837,
+      "pct": 48,
+      "settled": true,
+      "contrast": [
+        {
+          "t": "Golden Ember Sphere It breaks exactly on",
+          "dir": "light-on-dark",
+          "worst": 14.66,
+          "mean": 15.13
+        }
+      ],
+      "cues": [
+        {
+          "t": "Golden Ember Sphere It breaks exactly once. Va",
+          "o": 1
+        }
+      ],
+      "clips": [],
+      "rails": [
+        0
+      ],
+      "wipes": [
+        "none"
+      ],
+      "act": "pin",
+      "stages": [
+        -4217,
+        0,
+        1587,
+        6220
+      ],
+      "segs": [],
+      "custom": [],
+      "customHold": false,
+      "seg": null,
+      "segp": null,
+      "bg": "rgb(27,15,8)"
+    },
+    {
+      "i": 17,
+      "y": 6459,
+      "pct": 53,
+      "settled": true,
+      "contrast": [],
+      "cues": [],
+      "clips": [],
+      "rails": [
+        0
+      ],
+      "wipes": [
+        "none"
+      ],
+      "act": "pin",
+      "stages": [
+        -4839,
+        0,
+        965,
+        5598
+      ],
+      "segs": [],
+      "custom": [],
+      "customHold": false,
+      "seg": null,
+      "segp": null,
+      "bg": "rgb(27,15,8)"
+    },
+    {
+      "i": 18,
+      "y": 7481,
+      "pct": 61,
+      "settled": true,
+      "contrast": [],
+      "cues": [],
+      "clips": [],
+      "rails": [
+        -12
+      ],
+      "wipes": [
+        "none"
+      ],
+      "act": "pan",
+      "stages": [
+        -5861,
+        -957,
+        0,
+        4576
+      ],
+      "segs": [],
+      "custom": [],
+      "customHold": false,
+      "seg": null,
+      "segp": null,
+      "bg": "rgb(27,15,8)"
+    },
+    {
+      "i": 19,
+      "y": 8034,
+      "pct": 66,
+      "settled": true,
+      "contrast": [],
+      "cues": [],
+      "clips": [],
+      "rails": [
+        -124
+      ],
+      "wipes": [
+        "none"
+      ],
+      "act": "pan",
+      "stages": [
+        -6414,
+        -1510,
+        0,
+        4023
+      ],
+      "segs": [],
+      "custom": [],
+      "customHold": false,
+      "seg": null,
+      "segp": null,
+      "bg": "rgb(21,12,7)"
+    },
+    {
+      "i": 20,
+      "y": 8587,
+      "pct": 70,
+      "settled": true,
+      "contrast": [],
+      "cues": [],
+      "clips": [],
+      "rails": [
+        -237
+      ],
+      "wipes": [
+        "none"
+      ],
+      "act": "pan",
+      "stages": [
+        -6967,
+        -2063,
+        0,
+        3470
+      ],
+      "segs": [],
+      "custom": [],
+      "customHold": false,
+      "seg": null,
+      "segp": null,
+      "bg": "rgb(18,11,6)"
+    },
+    {
+      "i": 21,
+      "y": 9140,
+      "pct": 75,
+      "settled": true,
+      "contrast": [],
+      "cues": [],
+      "clips": [],
+      "rails": [
+        -350
+      ],
+      "wipes": [
+        "none"
+      ],
+      "act": "pan",
+      "stages": [
+        -7520,
+        -2616,
+        0,
+        2917
+      ],
+      "segs": [],
+      "custom": [],
+      "customHold": false,
+      "seg": null,
+      "segp": null,
+      "bg": "rgb(18,11,6)"
+    },
+    {
+      "i": 22,
+      "y": 9693,
+      "pct": 79,
+      "settled": true,
+      "contrast": [],
+      "cues": [],
+      "clips": [],
+      "rails": [
+        -463
+      ],
+      "wipes": [
+        "none"
+      ],
+      "act": "pan",
+      "stages": [
+        -8073,
+        -3169,
+        0,
+        2364
+      ],
+      "segs": [],
+      "custom": [],
+      "customHold": false,
+      "seg": null,
+      "segp": null,
+      "bg": "rgb(18,11,6)"
+    },
+    {
+      "i": 23,
+      "y": 10246,
+      "pct": 84,
+      "settled": true,
+      "contrast": [],
+      "cues": [],
+      "clips": [],
+      "rails": [
+        -576
+      ],
+      "wipes": [
+        "inset(0px 0px 100%)"
+      ],
+      "act": "pan",
+      "stages": [
+        -8626,
+        -3722,
+        0,
+        1811
+      ],
+      "segs": [],
+      "custom": [],
+      "customHold": false,
+      "seg": null,
+      "segp": null,
+      "bg": "rgb(18,11,6)"
+    },
+    {
+      "i": 24,
+      "y": 10339,
+      "pct": 84,
+      "settled": true,
+      "contrast": [],
+      "cues": [],
+      "clips": [],
+      "rails": [
+        -587
+      ],
+      "wipes": [
+        "inset(0px 0px 100%)"
+      ],
+      "act": "pan",
+      "stages": [
+        -8719,
+        -3815,
+        -35,
+        1718
+      ],
+      "segs": [],
+      "custom": [],
+      "customHold": false,
+      "seg": null,
+      "segp": null,
+      "bg": "rgb(18,11,6)"
+    },
+    {
+      "i": 25,
+      "y": 10676,
+      "pct": 87,
+      "settled": true,
+      "contrast": [],
+      "cues": [],
+      "clips": [],
+      "rails": [
+        -587
+      ],
+      "wipes": [
+        "inset(0px 0px 80.79%)"
+      ],
+      "act": "pan",
+      "stages": [
+        -9056,
+        -4152,
+        -372,
+        1381
+      ],
+      "segs": [],
+      "custom": [],
+      "customHold": false,
+      "seg": null,
+      "segp": null,
+      "bg": "rgb(16,10,6)"
+    },
+    {
+      "i": 26,
+      "y": 11012,
+      "pct": 90,
+      "settled": true,
+      "contrast": [],
+      "cues": [],
+      "clips": [],
+      "rails": [
+        -587
+      ],
+      "wipes": [
+        "inset(0px 0px 14.54%)"
+      ],
+      "act": "flow",
+      "stages": [
+        -9392,
+        -4488,
+        -708,
+        1045
+      ],
+      "segs": [],
+      "custom": [],
+      "customHold": false,
+      "seg": null,
+      "segp": null,
+      "bg": "rgb(15,9,6)"
+    },
+    {
+      "i": 27,
+      "y": 11349,
+      "pct": 93,
+      "settled": true,
+      "contrast": [],
+      "cues": [],
+      "clips": [],
+      "rails": [
+        -587
+      ],
+      "wipes": [
+        "inset(0px 0px 0%)"
+      ],
+      "act": "flow",
+      "stages": [
+        -9729,
+        -4825,
+        -1045,
+        708
+      ],
+      "segs": [],
+      "custom": [],
+      "customHold": false,
+      "seg": null,
+      "segp": null,
+      "bg": "rgb(15,9,6)"
+    },
+    {
+      "i": 28,
+      "y": 11685,
+      "pct": 95,
+      "settled": true,
+      "contrast": [],
+      "cues": [],
+      "clips": [],
+      "rails": [
+        -587
+      ],
+      "wipes": [
+        "inset(0px 0px 0%)"
+      ],
+      "act": "pin",
+      "stages": [
+        -10065,
+        -5161,
+        -1381,
+        372
+      ],
+      "segs": [],
+      "custom": [],
+      "customHold": false,
+      "seg": null,
+      "segp": null,
+      "bg": "rgb(15,9,6)"
+    },
+    {
+      "i": 29,
+      "y": 12022,
+      "pct": 98,
+      "settled": true,
+      "contrast": [],
+      "cues": [],
+      "clips": [],
+      "rails": [
+        -587
+      ],
+      "wipes": [
+        "inset(0px 0px 0%)"
+      ],
+      "act": "pin",
+      "stages": [
+        -10402,
+        -5498,
+        -1718,
+        35
+      ],
+      "segs": [],
+      "custom": [],
+      "customHold": false,
+      "seg": null,
+      "segp": null,
+      "bg": "rgb(15,9,6)"
+    },
+    {
+      "i": 30,
+      "y": 12061,
+      "pct": 99,
+      "settled": true,
+      "contrast": [],
+      "cues": [],
+      "clips": [],
+      "rails": [
+        -587
+      ],
+      "wipes": [
+        "inset(0px 0px 0%)"
+      ],
+      "act": "pin",
+      "stages": [
+        -10441,
+        -5537,
+        -1757,
+        0
+      ],
+      "segs": [],
+      "custom": [],
+      "customHold": false,
+      "seg": null,
+      "segp": null,
+      "bg": "rgb(15,9,6)"
+    },
+    {
+      "i": 31,
+      "y": 12095,
+      "pct": 99,
+      "settled": true,
+      "contrast": [
+        {
+          "t": "One table, one night, held for you.",
+          "dir": "light-on-dark",
+          "worst": 16.37,
+          "mean": 16.37
+        },
+        {
+          "t": "Reserve a Table",
+          "dir": "own-fill",
+          "worst": 7.33,
+          "mean": 7.33
+        }
+      ],
+      "cues": [
+        {
+          "t": "One table, one night, held for you.",
+          "o": 1
+        },
+        {
+          "t": "Reserve a Table",
+          "o": 0.93
+        },
+        {
+          "t": "(123) 456-7890 · 123 Culinary Avenue, City Cen",
+          "o": 0.67
+        }
+      ],
+      "clips": [],
+      "rails": [
+        -587
+      ],
+      "wipes": [
+        "inset(0px 0px 0%)"
+      ],
+      "act": "pin",
+      "stages": [
+        -10475,
+        -5571,
+        -1791,
+        0
+      ],
+      "segs": [],
+      "custom": [],
+      "customHold": false,
+      "seg": null,
+      "segp": null,
+      "bg": "rgb(12,8,5)"
+    },
+    {
+      "i": 32,
+      "y": 12130,
+      "pct": 99,
+      "settled": true,
+      "contrast": [
+        {
+          "t": "One table, one night, held for you.",
+          "dir": "light-on-dark",
+          "worst": 16.37,
+          "mean": 16.37
+        },
+        {
+          "t": "Reserve a Table",
+          "dir": "own-fill",
+          "worst": 7.33,
+          "mean": 7.33
+        },
+        {
+          "t": "(123) 456-7890 · 123 Culinary Avenue, Ci",
+          "dir": "light-on-dark",
+          "worst": 6.79,
+          "mean": 6.79
+        }
+      ],
+      "cues": [
+        {
+          "t": "One table, one night, held for you.",
+          "o": 1
+        },
+        {
+          "t": "Reserve a Table",
+          "o": 1
+        },
+        {
+          "t": "(123) 456-7890 · 123 Culinary Avenue, City Cen",
+          "o": 1
+        }
+      ],
+      "clips": [],
+      "rails": [
+        -587
+      ],
+      "wipes": [
+        "inset(0px 0px 0%)"
+      ],
+      "act": "pin",
+      "stages": [
+        -10510,
+        -5606,
+        -1826,
+        0
+      ],
+      "segs": [],
+      "custom": [],
+      "customHold": false,
+      "seg": null,
+      "segp": null,
+      "bg": "rgb(11,8,5)"
+    },
+    {
+      "i": 33,
+      "y": 12164,
+      "pct": 99,
+      "settled": true,
+      "contrast": [
+        {
+          "t": "One table, one night, held for you.",
+          "dir": "light-on-dark",
+          "worst": 16.37,
+          "mean": 16.37
+        },
+        {
+          "t": "Reserve a Table",
+          "dir": "own-fill",
+          "worst": 7.33,
+          "mean": 7.33
+        },
+        {
+          "t": "(123) 456-7890 · 123 Culinary Avenue, Ci",
+          "dir": "light-on-dark",
+          "worst": 6.79,
+          "mean": 6.79
+        }
+      ],
+      "cues": [
+        {
+          "t": "One table, one night, held for you.",
+          "o": 1
+        },
+        {
+          "t": "Reserve a Table",
+          "o": 1
+        },
+        {
+          "t": "(123) 456-7890 · 123 Culinary Avenue, City Cen",
+          "o": 1
+        }
+      ],
+      "clips": [],
+      "rails": [
+        -587
+      ],
+      "wipes": [
+        "inset(0px 0px 0%)"
+      ],
+      "act": "pin",
+      "stages": [
+        -10544,
+        -5640,
+        -1860,
+        0
+      ],
+      "segs": [],
+      "custom": [],
+      "customHold": false,
+      "seg": null,
+      "segp": null,
+      "bg": "rgb(11,8,5)"
+    },
+    {
+      "i": 34,
+      "y": 12199,
+      "pct": 100,
+      "settled": true,
+      "contrast": [
+        {
+          "t": "One table, one night, held for you.",
+          "dir": "light-on-dark",
+          "worst": 16.37,
+          "mean": 16.37
+        },
+        {
+          "t": "Reserve a Table",
+          "dir": "own-fill",
+          "worst": 7.33,
+          "mean": 7.33
+        },
+        {
+          "t": "(123) 456-7890 · 123 Culinary Avenue, Ci",
+          "dir": "light-on-dark",
+          "worst": 6.79,
+          "mean": 6.79
+        }
+      ],
+      "cues": [
+        {
+          "t": "One table, one night, held for you.",
+          "o": 1
+        },
+        {
+          "t": "Reserve a Table",
+          "o": 1
+        },
+        {
+          "t": "(123) 456-7890 · 123 Culinary Avenue, City Cen",
+          "o": 1
+        }
+      ],
+      "clips": [],
+      "rails": [
+        -587
+      ],
+      "wipes": [
+        "inset(0px 0px 0%)"
+      ],
+      "act": "pin",
+      "stages": [
+        -10579,
+        -5675,
+        -1895,
+        0
+      ],
+      "segs": [],
+      "custom": [],
+      "customHold": false,
+      "seg": null,
+      "segp": null,
+      "bg": "rgb(11,8,5)"
+    },
+    {
+      "i": 35,
+      "y": 12233,
+      "pct": 100,
+      "settled": true,
+      "contrast": [
+        {
+          "t": "One table, one night, held for you.",
+          "dir": "light-on-dark",
+          "worst": 16.37,
+          "mean": 16.37
+        },
+        {
+          "t": "Reserve a Table",
+          "dir": "own-fill",
+          "worst": 7.33,
+          "mean": 7.33
+        },
+        {
+          "t": "(123) 456-7890 · 123 Culinary Avenue, Ci",
+          "dir": "light-on-dark",
+          "worst": 6.79,
+          "mean": 6.79
+        }
+      ],
+      "cues": [
+        {
+          "t": "One table, one night, held for you.",
+          "o": 1
+        },
+        {
+          "t": "Reserve a Table",
+          "o": 1
+        },
+        {
+          "t": "(123) 456-7890 · 123 Culinary Avenue, City Cen",
+          "o": 1
+        }
+      ],
+      "clips": [],
+      "rails": [
+        -587
+      ],
+      "wipes": [
+        "inset(0px 0px 0%)"
+      ],
+      "act": "pin",
+      "stages": [
+        -10613,
+        -5709,
+        -1929,
+        0
+      ],
+      "segs": [],
+      "custom": [],
+      "customHold": false,
+      "seg": null,
+      "segp": null,
+      "bg": "rgb(11,8,5)"
+    },
+    {
+      "i": 36,
+      "y": 12237,
+      "pct": 100,
+      "settled": true,
+      "contrast": [
+        {
+          "t": "One table, one night, held for you.",
+          "dir": "light-on-dark",
+          "worst": 16.37,
+          "mean": 16.37
+        },
+        {
+          "t": "Reserve a Table",
+          "dir": "own-fill",
+          "worst": 7.33,
+          "mean": 7.33
+        },
+        {
+          "t": "(123) 456-7890 · 123 Culinary Avenue, Ci",
+          "dir": "light-on-dark",
+          "worst": 6.79,
+          "mean": 6.79
+        }
+      ],
+      "cues": [
+        {
+          "t": "One table, one night, held for you.",
+          "o": 1
+        },
+        {
+          "t": "Reserve a Table",
+          "o": 1
+        },
+        {
+          "t": "(123) 456-7890 · 123 Culinary Avenue, City Cen",
+          "o": 1
+        }
+      ],
+      "clips": [],
+      "rails": [
+        -587
+      ],
+      "wipes": [
+        "inset(0px 0px 0%)"
+      ],
+      "act": "pin",
+      "stages": [
+        -10617,
+        -5713,
+        -1933,
+        0
+      ],
+      "segs": [],
+      "custom": [],
+      "customHold": false,
+      "seg": null,
+      "segp": null,
+      "bg": "rgb(11,8,5)"
+    }
+  ],
+  "consoleErrors": [],
+  "failed": []
+}

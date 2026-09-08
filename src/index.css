@@ -69,6 +69,10 @@ html.light {
 }
 
 /* Global transitions for theme elements (smooth 350ms switch without layout shift) */
+html, body {
+  overflow-x: hidden;
+}
+
 body {
   background-color: var(--bg-primary);
   color: var(--text-primary);
@@ -237,30 +241,34 @@ main img {
 }
 
 /* --- Viewport reveal ------------------------------------------------------ */
-/* JS (useImageAnimations) tags eligible images with .img-anim, then toggles
-   .is-revealed when they scroll into view. Fallback: if JS never runs, the
-   :not(.img-anim) images are unaffected and a safety timer reveals the rest. */
-.img-anim {
+/* JS (useImageAnimations) tags eligible images with [data-img-anim], then
+   sets [data-img-revealed] when they scroll into view. These are plain DOM
+   attributes rather than classes, and deliberately never appear as JSX
+   props anywhere — React only ever replaces attributes it is itself
+   managing, so this state survives re-renders triggered by unrelated
+   prop/state changes (e.g. a dark/light theme toggle elsewhere on the
+   page). Fallback: if JS never runs, a safety timer reveals everything. */
+img[data-img-anim] {
   opacity: 0;
   transform: translate3d(0, 18px, 0) scale(1.05);
   will-change: transform, opacity;
 }
-.img-anim.is-revealed {
+img[data-img-anim][data-img-revealed] {
   opacity: 1;
   transform: translate3d(0, 0, 0) scale(1);
 }
 /* Once settled, release the compositor hint */
-.img-anim.is-revealed.reveal-done {
+img[data-img-anim][data-img-revealed][data-img-done] {
   will-change: auto;
 }
 
 /* --- Hover zoom --------------------------------------------------------- */
 /* Only on real hover-capable pointers so touch devices never get stuck zoomed */
 @media (hover: hover) and (pointer: fine) {
-  main .group:hover img.img-anim,
-  main a:hover img.img-anim,
-  main .overflow-hidden:hover > img.img-anim,
-  main .overflow-hidden:hover > a > img.img-anim {
+  main .group:hover img[data-img-anim],
+  main a:hover img[data-img-anim],
+  main .overflow-hidden:hover > img[data-img-anim],
+  main .overflow-hidden:hover > a > img[data-img-anim] {
     transform: translate3d(0, 0, 0) scale(1.055);
   }
 }
@@ -298,7 +306,6 @@ main img {
 
 @media (prefers-reduced-motion: reduce) {
   main img,
-  .img-anim,
   .img-parallax,
   .img-kenburns,
   .animate-ken-burns {
@@ -310,4 +317,215 @@ main img {
   }
 }
 
+/* ==========================================================================
+   SITE-WIDE SCROLL REVEAL (GSAP + ScrollTrigger)
+   These rules define only the HIDDEN starting look for each variant, so the
+   page paints correctly hidden before useScrollReveal's effect attaches (no
+   flash of fully-visible content). GSAP owns the actual animation — forward
+   on scroll-in, reversed on scroll-out — driving these same properties
+   (transform/opacity/clip-path) directly every frame, which is why there is
+   deliberately no `transition` here: a CSS transition fighting a per-frame
+   GSAP-driven value produces visible lag. Every trigger uses
+   `toggleActions: "play reverse play reverse"`, so this is never a one-shot
+   animation; see useScrollReveal.ts.
+   ========================================================================== */
+[data-reveal] {
+  opacity: 0;
+  will-change: transform, opacity, clip-path;
+}
+
+[data-reveal='up'] {
+  transform: translate3d(0, 34px, 0);
+}
+[data-reveal='down'] {
+  transform: translate3d(0, -28px, 0);
+}
+[data-reveal='left'] {
+  transform: translate3d(-44px, 0, 0);
+}
+[data-reveal='right'] {
+  transform: translate3d(44px, 0, 0);
+}
+[data-reveal='scale'] {
+  transform: scale(0.94);
+}
+[data-reveal='fade'] {
+  transform: none;
+}
+[data-reveal='clip'] {
+  transform: none;
+  clip-path: inset(0 100% 0 0);
+}
+[data-reveal='clip-right'] {
+  transform: none;
+  clip-path: inset(0 0 0 100%);
+}
+
+/* Lighter, shorter-throw motion on narrow screens: keeps the cinematic
+   feel without inviting layout jitter or scroll jank on mobile GPUs. */
+@media (max-width: 640px) {
+  [data-reveal='up'] {
+    transform: translate3d(0, 20px, 0);
+  }
+  [data-reveal='left'] {
+    transform: translate3d(-22px, 0, 0);
+  }
+  [data-reveal='right'] {
+    transform: translate3d(22px, 0, 0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  [data-reveal] {
+    opacity: 1 !important;
+    transform: none !important;
+    clip-path: none !important;
+  }
+}
+
+/* --- Icon pop: hidden starting look, animated by the group's GSAP timeline
+   alongside its card's heading/text so it un-pops in sync when reversed. */
+.reveal-icon {
+  opacity: 0;
+  transform: scale(0.5) rotate(-8deg);
+  will-change: transform, opacity;
+}
+@media (prefers-reduced-motion: reduce) {
+  .reveal-icon {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}
+
+/* ==========================================================================
+   HERO — scroll-scrubbed exit fade + background scale/drift
+   Driven entirely by GSAP ScrollTrigger (useHeroScrollEffects): a single
+   scrub timeline ties both the content's fade/rise/scale-down and the
+   background layers' drift/zoom directly to scroll position, so it is
+   inherently continuous and reverses for free when scrolling back up —
+   there is no discrete "revealed" state to get stuck in.
+   ========================================================================== */
+.hero-content-fade,
+[data-hero-bg] {
+  will-change: transform, opacity;
+}
+@media (prefers-reduced-motion: reduce) {
+  .hero-content-fade,
+  [data-hero-bg] {
+    transform: none !important;
+    opacity: 1 !important;
+  }
+}
+
+/* --- Split hero CTA stagger (second button trails the first) ---------- */
+.hero-slide-active .hero-anim-5 {
+  animation-delay: 1.05s;
+}
+
+/* ==========================================================================
+   ELEGANT ENTRANCE KEYFRAMES
+   Real replacements for the inert `animate-in` utility classes used on the
+   lightbox, reservation modal and mobile nav drawer (no plugin was ever
+   installed to back them).
+   ========================================================================== */
+@keyframes overlay-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes modal-pop-in {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 16px, 0) scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+}
+@keyframes lightbox-stage-in {
+  from {
+    opacity: 0;
+    transform: scale(0.94);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+@keyframes drawer-in {
+  from {
+    opacity: 0;
+    transform: translate3d(0, -14px, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.anim-overlay-in {
+  animation: overlay-in 280ms ease-out both;
+}
+.anim-modal-in {
+  animation: modal-pop-in 380ms cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+.anim-lightbox-in {
+  animation: lightbox-stage-in 420ms cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+.anim-drawer-in {
+  animation: drawer-in 260ms cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .anim-overlay-in,
+  .anim-modal-in,
+  .anim-lightbox-in,
+  .anim-drawer-in {
+    animation: none;
+  }
+}
+
+/* --- Elegant focus state for every form control ------------------------ */
+main input:focus,
+main select:focus,
+main textarea:focus,
+#reservation-modal-content input:focus,
+#reservation-modal-content select:focus,
+#reservation-modal-content textarea:focus {
+  box-shadow: 0 0 0 3px var(--color-gold-bg);
+  transition: box-shadow 250ms ease, border-color 250ms ease;
+}
+
+/* --- Scroll progress bar ------------------------------------------------ */
+#scroll-progress-track {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  z-index: 70;
+  background: transparent;
+  pointer-events: none;
+}
+#scroll-progress-bar {
+  height: 100%;
+  width: 100%;
+  transform-origin: left center;
+  transform: scaleX(0);
+  background: linear-gradient(
+    to right,
+    var(--color-gold) 0%,
+    var(--color-gold-hover) 100%
+  );
+  will-change: transform;
+}
+@media (prefers-reduced-motion: reduce) {
+  #scroll-progress-bar {
+    transition: none !important;
+  }
+}
 

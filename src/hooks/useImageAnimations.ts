@@ -32,7 +32,7 @@ export function useImageAnimations(routeKey: unknown): void {
           !img.dataset.noAnim
       );
       imgs.forEach((img) => {
-        if (!img.classList.contains('img-anim')) img.classList.add('img-anim');
+        if (!img.hasAttribute('data-img-anim')) img.setAttribute('data-img-anim', 'true');
       });
       return imgs;
     };
@@ -40,7 +40,10 @@ export function useImageAnimations(routeKey: unknown): void {
     let images = scan();
 
     if (prefersReduced) {
-      images.forEach((img) => img.classList.add('is-revealed', 'reveal-done'));
+      images.forEach((img) => {
+        img.setAttribute('data-img-revealed', 'true');
+        img.setAttribute('data-img-done', 'true');
+      });
       return;
     }
 
@@ -52,9 +55,9 @@ export function useImageAnimations(routeKey: unknown): void {
         entries.forEach((entry) => {
           if (!entry.isIntersecting) return;
           const el = entry.target as HTMLImageElement;
-          el.classList.add('is-revealed');
+          el.setAttribute('data-img-revealed', 'true');
           const t = window.setTimeout(
-            () => el.classList.add('reveal-done'),
+            () => el.setAttribute('data-img-done', 'true'),
             1000
           );
           revealTimers.set(el, t);
@@ -70,15 +73,16 @@ export function useImageAnimations(routeKey: unknown): void {
     const rescan = window.setTimeout(() => {
       images = scan();
       images.forEach((img) => {
-        if (!img.classList.contains('is-revealed')) io.observe(img);
+        if (!img.hasAttribute('data-img-revealed')) io.observe(img);
       });
     }, 400);
 
     // Safety net: never leave an image invisible.
     const safety = window.setTimeout(() => {
-      scan().forEach((img) =>
-        img.classList.add('is-revealed', 'reveal-done')
-      );
+      scan().forEach((img) => {
+        img.setAttribute('data-img-revealed', 'true');
+        img.setAttribute('data-img-done', 'true');
+      });
     }, 3000);
 
     // --- subtle parallax --------------------------------------------------

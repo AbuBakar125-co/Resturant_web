@@ -93,12 +93,12 @@ export const Header: React.FC<HeaderProps> = ({
           </div>
           <div>
             <span
-              className={`block font-serif text-xl sm:text-2xl tracking-[0.18em] font-bold transition-colors ${logoTextClass}`}
+              className={`block whitespace-nowrap font-serif text-base tracking-[0.1em] sm:text-xl sm:tracking-[0.15em] md:text-2xl md:tracking-[0.18em] font-bold transition-colors ${logoTextClass}`}
             >
               MAISON EMBER
             </span>
             <span
-              className={`block text-[10px] uppercase tracking-[0.3em] -mt-0.5 font-sans font-medium transition-colors ${subLogoClass}`}
+              className={`hidden sm:block whitespace-nowrap text-[10px] uppercase tracking-[0.3em] -mt-0.5 font-sans font-medium transition-colors ${subLogoClass}`}
             >
               Fine Dining &bull; City Center
             </span>
@@ -192,7 +192,7 @@ export const Header: React.FC<HeaderProps> = ({
       {/* Mobile Menu Drawer */}
       {mobileMenuOpen && (
         <div
-          className={`md:hidden fixed inset-x-0 top-full border-b backdrop-blur-xl shadow-2xl transition-all duration-300 px-6 py-8 animate-in fade-in slide-in-from-top-4 ${
+          className={`anim-drawer-in md:hidden absolute inset-x-0 top-full max-h-[calc(100svh-4rem)] overflow-y-auto border-b backdrop-blur-xl shadow-2xl px-6 py-8 ${
             isDark
               ? 'bg-[#0C0D0E]/98 border-[#25282C] text-[#EDE6D8]'
               : 'bg-[#FAF8F3]/98 border-[#E8E2D6] text-[#171717]'

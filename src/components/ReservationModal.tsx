@@ -94,11 +94,11 @@ export const ReservationModal: React.FC<ReservationModalProps> = ({
   return (
     <div
       id="reservation-modal-overlay"
-      className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 bg-black/85 backdrop-blur-md overflow-y-auto animate-in fade-in duration-300"
+      className="anim-overlay-in fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 bg-black/85 backdrop-blur-md overflow-y-auto"
     >
       <div
         id="reservation-modal-content"
-        className={`relative w-full max-w-2xl rounded-2xl p-6 sm:p-8 shadow-2xl my-8 max-h-[90vh] overflow-y-auto border transition-colors ${
+        className={`anim-modal-in relative w-full max-w-2xl rounded-2xl p-6 sm:p-8 shadow-2xl my-8 max-h-[90vh] overflow-y-auto border transition-colors ${
           isDark
             ? 'bg-[#111215] border-[#2D3138] text-[#EDE6D8] shadow-black/80'
             : 'bg-[#FFFFFF] border-[#E2D9CA] text-[#171717] shadow-xl shadow-black/15'

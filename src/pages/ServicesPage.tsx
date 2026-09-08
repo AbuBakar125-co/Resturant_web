@@ -62,7 +62,7 @@ export const ServicesPage: React.FC<ServicesPageProps> = ({ onNavigate, onOpenRe
           <img
             src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?q=80&w=2000&auto=format&fit=crop"
             alt="Maison Ember Event Atmosphere"
-            className="w-full h-full object-cover"
+            className="img-kenburns w-full h-full object-cover"
           />
           <div
             className={`absolute inset-0 ${
@@ -73,8 +73,9 @@ export const ServicesPage: React.FC<ServicesPageProps> = ({ onNavigate, onOpenRe
           />
         </div>
 
-        <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-4">
+        <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-4" data-reveal-group>
           <div
+            data-reveal="up"
             className={`inline-flex items-center gap-2 px-3.5 py-1 rounded-full border backdrop-blur-md ${
               isDark
                 ? 'border-[#C5A059]/40 bg-[#16181D]/80 text-[#C5A059]'
@@ -87,6 +88,7 @@ export const ServicesPage: React.FC<ServicesPageProps> = ({ onNavigate, onOpenRe
           </div>
 
           <h1
+            data-reveal="up"
             className={`font-serif text-4xl sm:text-6xl lg:text-7xl font-bold tracking-tight ${
               isDark ? 'text-[#EDE6D8]' : 'text-[#171717]'
             }`}
@@ -98,6 +100,7 @@ export const ServicesPage: React.FC<ServicesPageProps> = ({ onNavigate, onOpenRe
           </h1>
 
           <p
+            data-reveal="fade"
             className={`text-sm sm:text-base max-w-2xl mx-auto leading-relaxed font-light ${
               isDark ? 'text-[#B8B0A2]' : 'text-[#57534E]'
             }`}
@@ -110,11 +113,12 @@ export const ServicesPage: React.FC<ServicesPageProps> = ({ onNavigate, onOpenRe
       {/* 2. SERVICES GRID */}
       <section className="py-24 sm:py-32">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" data-reveal-group>
             {SERVICES_LIST.map((service) => (
               <div
                 key={service.id}
                 id={`service-card-${service.id}`}
+                data-reveal="up"
                 className={`group relative rounded-2xl overflow-hidden border transition-all duration-500 hover:-translate-y-2 flex flex-col justify-between shadow-lg ${
                   isDark
                     ? 'bg-[#121417] border-[#22252D] hover:border-[#C5A059]/60 hover:shadow-2xl hover:shadow-[#C5A059]/10'
@@ -139,7 +143,7 @@ export const ServicesPage: React.FC<ServicesPageProps> = ({ onNavigate, onOpenRe
 
                   {/* Icon badge */}
                   <div
-                    className={`absolute top-4 left-4 w-10 h-10 rounded-xl border backdrop-blur-md flex items-center justify-center ${
+                    className={`reveal-icon absolute top-4 left-4 w-10 h-10 rounded-xl border backdrop-blur-md flex items-center justify-center transition-transform group-hover:scale-110 group-hover:-rotate-3 ${
                       isDark
                         ? 'bg-[#181A1F]/90 border-[#2D313A]'
                         : 'bg-white/90 border-[#E2D9CA] shadow-sm'
@@ -205,7 +209,7 @@ export const ServicesPage: React.FC<ServicesPageProps> = ({ onNavigate, onOpenRe
                     <button
                       id={`learn-more-${service.id}`}
                       onClick={() => setSelectedService(service)}
-                      className={`w-full py-2.5 rounded-xl border text-xs font-semibold uppercase tracking-[0.18em] transition-all flex items-center justify-center gap-2 cursor-pointer ${
+                      className={`w-full py-2.5 rounded-xl border text-xs font-semibold uppercase tracking-[0.18em] transition-all hover:-translate-y-0.5 flex items-center justify-center gap-2 cursor-pointer ${
                         isDark
                           ? 'border-[#2B2F38] hover:border-[#C5A059] bg-[#16181D] hover:bg-[#C5A059] text-[#EDE6D8] hover:text-[#0C0D0E]'
                           : 'border-[#E2D9CA] hover:border-[#A67C00] bg-[#F4EFE6] hover:bg-[#A67C00] text-[#171717] hover:text-white'
@@ -232,6 +236,7 @@ export const ServicesPage: React.FC<ServicesPageProps> = ({ onNavigate, onOpenRe
       >
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <div
+            data-reveal-group
             className={`p-8 sm:p-12 rounded-3xl border flex flex-col md:flex-row items-center justify-between gap-8 text-center md:text-left shadow-lg ${
               isDark
                 ? 'bg-[#14161B] border-[#2B2F38]'
@@ -240,12 +245,14 @@ export const ServicesPage: React.FC<ServicesPageProps> = ({ onNavigate, onOpenRe
           >
             <div className="space-y-2 max-w-xl">
               <span
+                data-reveal="up"
                 className="text-xs uppercase tracking-[0.25em] font-medium"
                 style={{ color: goldAccent }}
               >
                 Dedicated Event Director
               </span>
               <h3
+                data-reveal="up"
                 className={`font-serif text-2xl sm:text-3xl font-bold ${
                   isDark ? 'text-[#EDE6D8]' : 'text-[#171717]'
                 }`}
@@ -253,6 +260,7 @@ export const ServicesPage: React.FC<ServicesPageProps> = ({ onNavigate, onOpenRe
                 Planning a Bespoke Gathering?
               </h3>
               <p
+                data-reveal="fade"
                 className={`text-xs sm:text-sm leading-relaxed ${
                   isDark ? 'text-[#8F887C]' : 'text-[#78716C]'
                 }`}
@@ -261,7 +269,7 @@ export const ServicesPage: React.FC<ServicesPageProps> = ({ onNavigate, onOpenRe
               </p>
             </div>
 
-            <div className="flex flex-col sm:flex-row items-center gap-4">
+            <div data-reveal="scale" className="flex flex-col sm:flex-row items-center gap-4">
               <a
                 href={`tel:${RESTAURANT_INFO.phone}`}
                 className={`w-full sm:w-auto px-6 py-3.5 rounded-full border text-xs font-semibold uppercase tracking-wider flex items-center justify-center gap-2 transition-colors ${
@@ -294,9 +302,9 @@ export const ServicesPage: React.FC<ServicesPageProps> = ({ onNavigate, onOpenRe
 
       {/* Service Detail Modal */}
       {selectedService && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 bg-black/80 backdrop-blur-md animate-in fade-in">
+        <div className="anim-overlay-in fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 bg-black/80 backdrop-blur-md">
           <div
-            className={`relative w-full max-w-2xl border rounded-2xl p-6 sm:p-8 shadow-2xl my-8 max-h-[90vh] overflow-y-auto ${
+            className={`anim-modal-in relative w-full max-w-2xl border rounded-2xl p-6 sm:p-8 shadow-2xl my-8 max-h-[90vh] overflow-y-auto ${
               isDark
                 ? 'bg-[#111215] border-[#2D3138] text-[#EDE6D8]'
                 : 'bg-white border-[#E2D9CA] text-[#171717]'

@@ -1,11 +1,14 @@
 import React, { useState, useEffect } from 'react';
+import { motion, useReducedMotion } from 'motion/react';
 import { PageRoute } from './types';
 import { ThemeProvider, useTheme } from './context/ThemeContext';
 import { useImageAnimations } from './hooks/useImageAnimations';
+import { useScrollReveal } from './hooks/useScrollReveal';
 import { Header } from './components/Header';
 import { Footer } from './components/Footer';
 import { ReservationModal } from './components/ReservationModal';
 import { LoadingScreen } from './components/LoadingScreen';
+import { ScrollProgressBar } from './components/ScrollProgressBar';
 import { HomePage } from './pages/HomePage';
 import { AboutPage } from './pages/AboutPage';
 import { ServicesPage } from './pages/ServicesPage';
@@ -17,9 +20,13 @@ function AppContent() {
   const { isDark } = useTheme();
   const [currentPage, setCurrentPage] = useState<PageRoute>('home');
   const [reservationModalOpen, setReservationModalOpen] = useState(false);
+  const prefersReducedMotion = useReducedMotion();
 
   // Site-wide subtle image animations (reveal on scroll + gentle parallax)
   useImageAnimations(currentPage);
+
+  // Site-wide scroll-triggered reveals for headings, copy, cards & layout blocks
+  useScrollReveal(currentPage);
 
   // Sync initial route with pathname or hash
   useEffect(() => {
@@ -85,6 +92,9 @@ function AppContent() {
       {/* Loading Splash */}
       <LoadingScreen />
 
+      {/* Thin scroll-position indicator */}
+      <ScrollProgressBar routeKey={currentPage} />
+
       {/* Global Luxury Navigation Header */}
       <Header
         currentPage={currentPage}
@@ -94,6 +104,12 @@ function AppContent() {
 
       {/* Main Routed Page Content */}
       <main id="main-content" className="flex-1">
+        <motion.div
+          key={currentPage}
+          initial={prefersReducedMotion ? undefined : { opacity: 0, y: 14 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
+        >
         {currentPage === 'home' && (
           <HomePage
             onNavigate={handleNavigate}
@@ -130,6 +146,7 @@ function AppContent() {
             onOpenReservation={() => setReservationModalOpen(true)}
           />
         )}
+        </motion.div>
       </main>
 
       {/* Global Footer */}

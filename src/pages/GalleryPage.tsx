@@ -48,7 +48,7 @@ export const GalleryPage: React.FC<GalleryPageProps> = ({ onOpenReservation }) =
           <img
             src="https://images.unsplash.com/photo-1550966871-3ed3cdb5ed0c?q=80&w=2000&auto=format&fit=crop"
             alt="Maison Ember Ambiance"
-            className="w-full h-full object-cover"
+            className="img-kenburns w-full h-full object-cover"
           />
           <div
             className={`absolute inset-0 ${
@@ -59,8 +59,9 @@ export const GalleryPage: React.FC<GalleryPageProps> = ({ onOpenReservation }) =
           />
         </div>
 
-        <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-4">
+        <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-4" data-reveal-group>
           <div
+            data-reveal="up"
             className={`inline-flex items-center gap-2 px-3.5 py-1 rounded-full border backdrop-blur-md ${
               isDark
                 ? 'border-[#C5A059]/40 bg-[#16181D]/80 text-[#C5A059]'
@@ -74,6 +75,7 @@ export const GalleryPage: React.FC<GalleryPageProps> = ({ onOpenReservation }) =
           </div>
 
           <h1
+            data-reveal="up"
             className={`font-serif text-4xl sm:text-6xl lg:text-7xl font-bold tracking-tight ${
               isDark ? 'text-[#EDE6D8]' : 'text-[#171717]'
             }`}
@@ -82,6 +84,7 @@ export const GalleryPage: React.FC<GalleryPageProps> = ({ onOpenReservation }) =
           </h1>
 
           <p
+            data-reveal="up"
             className="font-serif italic text-xl sm:text-2xl max-w-2xl mx-auto"
             style={{ color: goldAccent }}
           >
@@ -89,6 +92,7 @@ export const GalleryPage: React.FC<GalleryPageProps> = ({ onOpenReservation }) =
           </p>
 
           <p
+            data-reveal="fade"
             className={`text-sm sm:text-base max-w-xl mx-auto leading-relaxed font-light ${
               isDark ? 'text-[#B8B0A2]' : 'text-[#57534E]'
             }`}
@@ -134,7 +138,7 @@ export const GalleryPage: React.FC<GalleryPageProps> = ({ onOpenReservation }) =
       {/* 3. MASONRY / GRID PHOTO GALLERY */}
       <section className="py-16 sm:py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6" data-reveal-group>
             {filteredItems.map((item, index) => {
               const spanClass =
                 item.aspectRatio === 'wide'
@@ -148,6 +152,7 @@ export const GalleryPage: React.FC<GalleryPageProps> = ({ onOpenReservation }) =
                   key={item.id}
                   id={`gallery-item-${item.id}`}
                   onClick={() => setLightboxIndex(index)}
+                  data-reveal="scale"
                   className={`group relative overflow-hidden rounded-2xl border cursor-pointer transition-all duration-500 hover:shadow-2xl ${spanClass} min-h-[300px] ${
                     isDark
                       ? 'bg-[#121417] border-[#22252C] hover:border-[#C5A059]/60 hover:shadow-[#C5A059]/10'
@@ -190,7 +195,7 @@ export const GalleryPage: React.FC<GalleryPageProps> = ({ onOpenReservation }) =
           </div>
 
           {/* Bottom Prompt */}
-          <div className="mt-20 text-center space-y-4">
+          <div className="mt-20 text-center space-y-4" data-reveal="up">
             <p className={`text-xs uppercase tracking-[0.2em] ${isDark ? 'text-[#8F887C]' : 'text-[#78716C]'}`}>
               Share your moments with us on Instagram &bull; #MaisonEmber
             </p>

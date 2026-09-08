@@ -57,7 +57,7 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onNavigate, onOpenReservat
           <img
             src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=2000&auto=format&fit=crop"
             alt="Maison Ember Architecture"
-            className="w-full h-full object-cover"
+            className="img-kenburns w-full h-full object-cover"
           />
           <div
             className={`absolute inset-0 ${
@@ -68,8 +68,9 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onNavigate, onOpenReservat
           />
         </div>
 
-        <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-4">
+        <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-4" data-reveal-group>
           <div
+            data-reveal="up"
             className={`inline-flex items-center gap-2 px-3.5 py-1 rounded-full border backdrop-blur-md ${
               isDark
                 ? 'border-[#C5A059]/40 bg-[#16181D]/80 text-[#C5A059]'
@@ -82,6 +83,7 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onNavigate, onOpenReservat
           </div>
 
           <h1
+            data-reveal="up"
             className={`font-serif text-4xl sm:text-6xl lg:text-7xl font-bold tracking-tight ${
               isDark ? 'text-[#EDE6D8]' : 'text-[#171717]'
             }`}
@@ -90,6 +92,7 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onNavigate, onOpenReservat
           </h1>
 
           <p
+            data-reveal="up"
             className="font-serif italic text-xl sm:text-2xl max-w-2xl mx-auto"
             style={{ color: goldAccent }}
           >
@@ -97,6 +100,7 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onNavigate, onOpenReservat
           </p>
 
           <p
+            data-reveal="fade"
             className={`text-sm sm:text-base max-w-xl mx-auto leading-relaxed font-light ${
               isDark ? 'text-[#B8B0A2]' : 'text-[#57534E]'
             }`}
@@ -111,7 +115,7 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onNavigate, onOpenReservat
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
             {/* Text story */}
-            <div className="lg:col-span-6 space-y-6">
+            <div className="lg:col-span-6 space-y-6" data-reveal="left">
               <div className="inline-flex items-center gap-2">
                 <span className="w-8 h-[1px]" style={{ backgroundColor: goldAccent }} />
                 <span
@@ -162,7 +166,7 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onNavigate, onOpenReservat
             </div>
 
             {/* Visual Collage */}
-            <div className="lg:col-span-6 relative">
+            <div className="lg:col-span-6 relative" data-reveal="right">
               <div
                 className={`rounded-2xl overflow-hidden border shadow-2xl ${
                   isDark ? 'border-[#252830]' : 'border-[#E2D9CA]'
@@ -202,29 +206,32 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onNavigate, onOpenReservat
         }`}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center max-w-2xl mx-auto mb-16 space-y-3">
+          <div className="text-center max-w-2xl mx-auto mb-16 space-y-3" data-reveal-group>
             <span
+              data-reveal="up"
               className="text-xs uppercase tracking-[0.25em] font-semibold"
               style={{ color: goldAccent }}
             >
               GUIDING PRINCIPLES
             </span>
             <h2
+              data-reveal="up"
               className={`font-serif text-3xl sm:text-5xl font-bold ${
                 isDark ? 'text-[#EDE6D8]' : 'text-[#171717]'
               }`}
             >
               Our Philosophy
             </h2>
-            <p className={`text-xs sm:text-sm ${isDark ? 'text-[#8F887C]' : 'text-[#78716C]'}`}>
+            <p data-reveal="fade" className={`text-xs sm:text-sm ${isDark ? 'text-[#8F887C]' : 'text-[#78716C]'}`}>
               Five foundational pillars that shape every menu we craft and every guest we welcome.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" data-reveal-group>
             {philosophyItems.map((item, index) => (
               <div
                 key={index}
+                data-reveal="up"
                 className={`p-8 rounded-2xl border transition-all duration-300 space-y-3 shadow-md ${
                   isDark
                     ? 'bg-[#131518] border-[#23272F] hover:border-[#C5A059]/40'
@@ -232,7 +239,7 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onNavigate, onOpenReservat
                 }`}
               >
                 <div
-                  className={`w-10 h-10 rounded-lg border flex items-center justify-center ${
+                  className={`reveal-icon w-10 h-10 rounded-lg border flex items-center justify-center ${
                     isDark
                       ? 'bg-[#181B20] border-[#2B2F38]'
                       : 'bg-[#F4EFE6] border-[#D5CCBE]'
@@ -259,6 +266,7 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onNavigate, onOpenReservat
 
             {/* Quote Card */}
             <div
+              data-reveal="up"
               className={`p-8 rounded-2xl border flex flex-col justify-between shadow-md ${
                 isDark
                   ? 'bg-gradient-to-br from-[#1C1914] to-[#121316] border-[#C5A059]/40'
@@ -293,7 +301,7 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onNavigate, onOpenReservat
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
             {/* Chef Portrait */}
-            <div className="lg:col-span-5 relative">
+            <div className="lg:col-span-5 relative" data-reveal="left">
               <div
                 className={`rounded-2xl overflow-hidden border shadow-2xl relative ${
                   isDark ? 'border-[#2B2F38]' : 'border-[#E2D9CA]'
@@ -326,7 +334,7 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onNavigate, onOpenReservat
             </div>
 
             {/* Chef Profile Details */}
-            <div className="lg:col-span-7 space-y-6">
+            <div className="lg:col-span-7 space-y-6" data-reveal="right">
               <div className="inline-flex items-center gap-2">
                 <ChefHat className="w-4 h-4" style={{ color: goldAccent }} />
                 <span
@@ -390,7 +398,7 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onNavigate, onOpenReservat
                     onNavigate('menu');
                     window.scrollTo({ top: 0, behavior: 'smooth' });
                   }}
-                  className={`inline-flex items-center gap-2 px-6 py-3 rounded-full border text-xs font-semibold uppercase tracking-[0.2em] transition-all cursor-pointer ${
+                  className={`inline-flex items-center gap-2 px-6 py-3 rounded-full border text-xs font-semibold uppercase tracking-[0.2em] transition-all hover:-translate-y-0.5 cursor-pointer ${
                     isDark
                       ? 'border-[#C5A059] text-[#C5A059] hover:bg-[#C5A059] hover:text-[#0C0D0E]'
                       : 'border-[#A67C00] text-[#A67C00] hover:bg-[#A67C00] hover:text-white'
@@ -414,29 +422,32 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onNavigate, onOpenReservat
         }`}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center max-w-xl mx-auto mb-16 space-y-2">
+          <div className="text-center max-w-xl mx-auto mb-16 space-y-2" data-reveal-group>
             <span
+              data-reveal="up"
               className="text-xs uppercase tracking-[0.25em] font-semibold"
               style={{ color: goldAccent }}
             >
               THE VALUES WE EMBODY
             </span>
             <h2
+              data-reveal="up"
               className={`font-serif text-3xl sm:text-4xl font-bold ${
                 isDark ? 'text-[#EDE6D8]' : 'text-[#171717]'
               }`}
             >
               Our Core Values
             </h2>
-            <p className={`text-xs ${isDark ? 'text-[#8F887C]' : 'text-[#78716C]'}`}>
+            <p data-reveal="fade" className={`text-xs ${isDark ? 'text-[#8F887C]' : 'text-[#78716C]'}`}>
               What we stand for every moment our doors are open.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6" data-reveal-group>
             {VALUES_LIST.map((val, idx) => (
               <div
                 key={idx}
+                data-reveal="up"
                 className={`p-8 rounded-2xl border transition-all duration-300 space-y-3 shadow-md ${
                   isDark
                     ? 'bg-[#131518] border-[#23272F] hover:border-[#C5A059]/50'
@@ -444,7 +455,7 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onNavigate, onOpenReservat
                 }`}
               >
                 <div
-                  className="w-8 h-8 rounded-full border flex items-center justify-center font-serif text-sm font-bold"
+                  className="reveal-icon w-8 h-8 rounded-full border flex items-center justify-center font-serif text-sm font-bold"
                   style={{ borderColor: goldAccent, color: goldAccent }}
                 >
                   {idx + 1}
@@ -469,6 +480,7 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onNavigate, onOpenReservat
 
           {/* Bottom CTA Banner */}
           <div
+            data-reveal-group
             className={`mt-20 p-8 sm:p-12 rounded-3xl border flex flex-col sm:flex-row items-center justify-between gap-6 text-center sm:text-left shadow-lg ${
               isDark
                 ? 'bg-[#14161B] border-[#2A2E38]'
@@ -477,20 +489,22 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onNavigate, onOpenReservat
           >
             <div className="space-y-1">
               <h3
+                data-reveal="up"
                 className={`font-serif text-2xl font-bold ${
                   isDark ? 'text-[#EDE6D8]' : 'text-[#171717]'
                 }`}
               >
                 Experience Our Story in Person
               </h3>
-              <p className={`text-xs ${isDark ? 'text-[#8F887C]' : 'text-[#78716C]'}`}>
+              <p data-reveal="fade" className={`text-xs ${isDark ? 'text-[#8F887C]' : 'text-[#78716C]'}`}>
                 Reservations are recommended 2–4 weeks in advance for weekend dinners.
               </p>
             </div>
             <button
               id="about-reserve-btn"
+              data-reveal="scale"
               onClick={onOpenReservation}
-              className={`px-8 py-3.5 rounded-full text-xs font-semibold uppercase tracking-[0.2em] transition-all cursor-pointer whitespace-nowrap shadow-md ${
+              className={`px-8 py-3.5 rounded-full text-xs font-semibold uppercase tracking-[0.2em] transition-all hover:-translate-y-0.5 cursor-pointer whitespace-nowrap shadow-md ${
                 isDark
                   ? 'bg-[#C5A059] hover:bg-[#DFBF77] text-[#0C0D0E]'
                   : 'bg-[#A67C00] hover:bg-[#B8860B] text-white'

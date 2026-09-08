@@ -34,7 +34,7 @@ export const Lightbox: React.FC<LightboxProps> = ({
   return (
     <div
       id="lightbox-backdrop"
-      className="fixed inset-0 z-50 bg-black/95 backdrop-blur-xl flex flex-col justify-between p-4 sm:p-8 animate-in fade-in duration-300"
+      className="anim-overlay-in fixed inset-0 z-50 bg-black/95 backdrop-blur-xl flex flex-col justify-between p-4 sm:p-8"
     >
       {/* Top Bar */}
       <div className="flex items-center justify-between z-10">
@@ -69,7 +69,10 @@ export const Lightbox: React.FC<LightboxProps> = ({
         </button>
 
         {/* Image Display */}
-        <div className="relative max-h-full max-w-5xl overflow-hidden rounded-xl border border-[#23272E] shadow-2xl bg-[#0F1012]">
+        <div
+          key={currentIndex}
+          className="anim-lightbox-in relative max-h-full max-w-5xl overflow-hidden rounded-xl border border-[#23272E] shadow-2xl bg-[#0F1012]"
+        >
           <img
             src={currentItem.image}
             alt={currentItem.title}

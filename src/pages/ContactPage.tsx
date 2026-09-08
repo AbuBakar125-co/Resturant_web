@@ -95,7 +95,7 @@ export const ContactPage: React.FC<ContactPageProps> = () => {
           <img
             src="https://images.unsplash.com/photo-1550966871-3ed3cdb5ed0c?q=80&w=2000&auto=format&fit=crop"
             alt="Maison Ember Concierge"
-            className="w-full h-full object-cover"
+            className="img-kenburns w-full h-full object-cover"
           />
           <div
             className={`absolute inset-0 ${
@@ -106,8 +106,9 @@ export const ContactPage: React.FC<ContactPageProps> = () => {
           />
         </div>
 
-        <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-4">
+        <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-4" data-reveal-group>
           <div
+            data-reveal="up"
             className={`inline-flex items-center gap-2 px-3.5 py-1 rounded-full border backdrop-blur-md ${
               isDark
                 ? 'border-[#C5A059]/40 bg-[#16181D]/80 text-[#C5A059]'
@@ -120,6 +121,7 @@ export const ContactPage: React.FC<ContactPageProps> = () => {
           </div>
 
           <h1
+            data-reveal="up"
             className={`font-serif text-4xl sm:text-6xl lg:text-7xl font-bold tracking-tight ${
               isDark ? 'text-[#EDE6D8]' : 'text-[#171717]'
             }`}
@@ -128,6 +130,7 @@ export const ContactPage: React.FC<ContactPageProps> = () => {
           </h1>
 
           <p
+            data-reveal="up"
             className="font-serif italic text-xl sm:text-2xl max-w-2xl mx-auto"
             style={{ color: goldAccent }}
           >
@@ -135,6 +138,7 @@ export const ContactPage: React.FC<ContactPageProps> = () => {
           </p>
 
           <p
+            data-reveal="fade"
             className={`text-sm sm:text-base max-w-xl mx-auto leading-relaxed font-light ${
               isDark ? 'text-[#B8B0A2]' : 'text-[#57534E]'
             }`}
@@ -149,7 +153,7 @@ export const ContactPage: React.FC<ContactPageProps> = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16">
             {/* Left: Contact Info Cards */}
-            <div className="lg:col-span-5 space-y-8">
+            <div className="lg:col-span-5 space-y-8" data-reveal="left">
               <div>
                 <span
                   className="text-xs uppercase tracking-[0.25em] font-semibold"
@@ -174,9 +178,10 @@ export const ContactPage: React.FC<ContactPageProps> = () => {
               </div>
 
               {/* Info Tiles */}
-              <div className="space-y-4">
+              <div className="space-y-4" data-reveal-group>
                 {/* Phone */}
                 <div
+                  data-reveal="up"
                   className={`p-5 rounded-2xl border flex items-start gap-4 transition-all ${
                     isDark
                       ? 'bg-[#131518] border-[#22252C]'
@@ -184,7 +189,7 @@ export const ContactPage: React.FC<ContactPageProps> = () => {
                   }`}
                 >
                   <div
-                    className={`w-10 h-10 rounded-xl border flex items-center justify-center shrink-0 mt-0.5 ${
+                    className={`reveal-icon w-10 h-10 rounded-xl border flex items-center justify-center shrink-0 mt-0.5 ${
                       isDark
                         ? 'bg-[#1A1D23] border-[#2F343E] text-[#C5A059]'
                         : 'bg-[#F9F6F0] border-[#E5DEC9] text-[#A67C00]'
@@ -218,6 +223,7 @@ export const ContactPage: React.FC<ContactPageProps> = () => {
 
                 {/* Email */}
                 <div
+                  data-reveal="up"
                   className={`p-5 rounded-2xl border flex items-start gap-4 transition-all ${
                     isDark
                       ? 'bg-[#131518] border-[#22252C]'
@@ -225,7 +231,7 @@ export const ContactPage: React.FC<ContactPageProps> = () => {
                   }`}
                 >
                   <div
-                    className={`w-10 h-10 rounded-xl border flex items-center justify-center shrink-0 mt-0.5 ${
+                    className={`reveal-icon w-10 h-10 rounded-xl border flex items-center justify-center shrink-0 mt-0.5 ${
                       isDark
                         ? 'bg-[#1A1D23] border-[#2F343E] text-[#C5A059]'
                         : 'bg-[#F9F6F0] border-[#E5DEC9] text-[#A67C00]'
@@ -259,6 +265,7 @@ export const ContactPage: React.FC<ContactPageProps> = () => {
 
                 {/* Opening Hours */}
                 <div
+                  data-reveal="up"
                   className={`p-5 rounded-2xl border flex items-start gap-4 transition-all ${
                     isDark
                       ? 'bg-[#131518] border-[#22252C]'
@@ -266,7 +273,7 @@ export const ContactPage: React.FC<ContactPageProps> = () => {
                   }`}
                 >
                   <div
-                    className={`w-10 h-10 rounded-xl border flex items-center justify-center shrink-0 mt-0.5 ${
+                    className={`reveal-icon w-10 h-10 rounded-xl border flex items-center justify-center shrink-0 mt-0.5 ${
                       isDark
                         ? 'bg-[#1A1D23] border-[#2F343E] text-[#C5A059]'
                         : 'bg-[#F9F6F0] border-[#E5DEC9] text-[#A67C00]'
@@ -306,6 +313,7 @@ export const ContactPage: React.FC<ContactPageProps> = () => {
 
                 {/* Address */}
                 <div
+                  data-reveal="up"
                   className={`p-5 rounded-2xl border flex items-start gap-4 transition-all ${
                     isDark
                       ? 'bg-[#131518] border-[#22252C]'
@@ -313,7 +321,7 @@ export const ContactPage: React.FC<ContactPageProps> = () => {
                   }`}
                 >
                   <div
-                    className={`w-10 h-10 rounded-xl border flex items-center justify-center shrink-0 mt-0.5 ${
+                    className={`reveal-icon w-10 h-10 rounded-xl border flex items-center justify-center shrink-0 mt-0.5 ${
                       isDark
                         ? 'bg-[#1A1D23] border-[#2F343E] text-[#C5A059]'
                         : 'bg-[#F9F6F0] border-[#E5DEC9] text-[#A67C00]'
@@ -349,7 +357,7 @@ export const ContactPage: React.FC<ContactPageProps> = () => {
             </div>
 
             {/* Right: Contact Form */}
-            <div className="lg:col-span-7">
+            <div className="lg:col-span-7" data-reveal="right">
               <div
                 className={`p-8 sm:p-10 rounded-3xl border shadow-2xl relative transition-all ${
                   isDark
@@ -600,7 +608,7 @@ export const ContactPage: React.FC<ContactPageProps> = () => {
                         id="contact-form-submit"
                         type="submit"
                         disabled={isSubmitting}
-                        className={`w-full py-4 rounded-full font-semibold text-xs uppercase tracking-[0.2em] transition-all shadow-lg flex items-center justify-center gap-2 cursor-pointer disabled:opacity-50 ${
+                        className={`w-full py-4 rounded-full font-semibold text-xs uppercase tracking-[0.2em] transition-all hover:-translate-y-0.5 shadow-lg flex items-center justify-center gap-2 cursor-pointer disabled:opacity-50 disabled:hover:translate-y-0 ${
                           isDark
                             ? 'bg-[#C5A059] hover:bg-[#DFBF77] text-[#0C0D0E] shadow-[#C5A059]/20 hover:shadow-[#C5A059]/40'
                             : 'bg-[#A67C00] hover:bg-[#B8860B] text-white shadow-[#A67C00]/20'
@@ -634,14 +642,16 @@ export const ContactPage: React.FC<ContactPageProps> = () => {
         }`}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center max-w-2xl mx-auto mb-12 space-y-2">
+          <div className="text-center max-w-2xl mx-auto mb-12 space-y-2" data-reveal-group>
             <span
+              data-reveal="up"
               className="text-xs uppercase tracking-[0.25em] font-semibold"
               style={{ color: goldAccent }}
             >
               FIND US
             </span>
             <h2
+              data-reveal="up"
               className={`font-serif text-3xl sm:text-4xl font-bold ${
                 isDark ? 'text-[#EDE6D8]' : 'text-[#171717]'
               }`}
@@ -649,6 +659,7 @@ export const ContactPage: React.FC<ContactPageProps> = () => {
               Location &amp; Arrival
             </h2>
             <p
+              data-reveal="fade"
               className={`text-xs ${
                 isDark ? 'text-[#8F887C]' : 'text-[#78716C]'
               }`}
@@ -659,6 +670,7 @@ export const ContactPage: React.FC<ContactPageProps> = () => {
 
           {/* Professional Map Placeholder */}
           <div
+            data-reveal="clip"
             className={`relative rounded-3xl overflow-hidden border shadow-2xl transition-all ${
               isDark
                 ? 'border-[#252932] bg-[#121417]'

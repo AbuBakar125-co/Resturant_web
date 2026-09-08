@@ -86,7 +86,7 @@ export const MenuPage: React.FC<MenuPageProps> = ({ onNavigate, onOpenReservatio
           <img
             src="https://images.unsplash.com/photo-1544025162-d76694265947?q=80&w=2000&auto=format&fit=crop"
             alt="Maison Ember Kitchen Craft"
-            className="w-full h-full object-cover"
+            className="img-kenburns w-full h-full object-cover"
           />
           <div
             className={`absolute inset-0 ${
@@ -97,8 +97,9 @@ export const MenuPage: React.FC<MenuPageProps> = ({ onNavigate, onOpenReservatio
           />
         </div>
 
-        <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-4">
+        <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-4" data-reveal-group>
           <div
+            data-reveal="up"
             className={`inline-flex items-center gap-2 px-3.5 py-1 rounded-full border backdrop-blur-md ${
               isDark
                 ? 'border-[#C5A059]/40 bg-[#16181D]/80 text-[#C5A059]'
@@ -111,6 +112,7 @@ export const MenuPage: React.FC<MenuPageProps> = ({ onNavigate, onOpenReservatio
           </div>
 
           <h1
+            data-reveal="up"
             className={`font-serif text-4xl sm:text-6xl lg:text-7xl font-bold tracking-tight ${
               isDark ? 'text-[#EDE6D8]' : 'text-[#171717]'
             }`}
@@ -119,6 +121,7 @@ export const MenuPage: React.FC<MenuPageProps> = ({ onNavigate, onOpenReservatio
           </h1>
 
           <p
+            data-reveal="up"
             className="font-serif italic text-xl sm:text-2xl max-w-2xl mx-auto"
             style={{ color: goldAccent }}
           >
@@ -126,6 +129,7 @@ export const MenuPage: React.FC<MenuPageProps> = ({ onNavigate, onOpenReservatio
           </p>
 
           <p
+            data-reveal="fade"
             className={`text-sm sm:text-base max-w-xl mx-auto leading-relaxed font-light ${
               isDark ? 'text-[#B8B0A2]' : 'text-[#57534E]'
             }`}
@@ -310,13 +314,14 @@ export const MenuPage: React.FC<MenuPageProps> = ({ onNavigate, onOpenReservatio
               </button>
             </div>
           ) : (
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-10">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-10" data-reveal-group>
               {filteredMenu.map((item) => {
                 const isSaved = savedItems.includes(item.id);
                 return (
                   <div
                     key={item.id}
                     id={`dish-${item.id}`}
+                    data-reveal="up"
                     className={`group flex flex-col sm:flex-row gap-5 p-5 rounded-2xl border transition-all duration-300 hover:shadow-xl ${
                       isDark
                         ? 'bg-[#121417] border-[#22252C] hover:border-[#C5A059]/50 hover:shadow-black/40'
@@ -490,6 +495,7 @@ export const MenuPage: React.FC<MenuPageProps> = ({ onNavigate, onOpenReservatio
 
           {/* Sommelier & Tasting Menu Note */}
           <div
+            data-reveal-group
             className={`mt-20 p-8 sm:p-10 rounded-3xl border max-w-4xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-6 text-center sm:text-left shadow-lg ${
               isDark
                 ? 'bg-[#14161B] border-[#282C35]'
@@ -498,6 +504,7 @@ export const MenuPage: React.FC<MenuPageProps> = ({ onNavigate, onOpenReservatio
           >
             <div className="space-y-2">
               <div
+                data-reveal="up"
                 className="inline-flex items-center gap-2 text-xs uppercase tracking-widest font-semibold"
                 style={{ color: goldAccent }}
               >
@@ -505,6 +512,7 @@ export const MenuPage: React.FC<MenuPageProps> = ({ onNavigate, onOpenReservatio
                 <span>Chef&apos;s 7-Course Omakase Tasting</span>
               </div>
               <h3
+                data-reveal="up"
                 className={`font-serif text-2xl font-bold ${
                   isDark ? 'text-[#EDE6D8]' : 'text-[#171717]'
                 }`}
@@ -512,6 +520,7 @@ export const MenuPage: React.FC<MenuPageProps> = ({ onNavigate, onOpenReservatio
                 Grand Tasting Menu Available Nightly
               </h3>
               <p
+                data-reveal="fade"
                 className={`text-xs max-w-md ${
                   isDark ? 'text-[#8F887C]' : 'text-[#78716C]'
                 }`}
@@ -521,6 +530,7 @@ export const MenuPage: React.FC<MenuPageProps> = ({ onNavigate, onOpenReservatio
             </div>
 
             <button
+              data-reveal="scale"
               onClick={onOpenReservation}
               className={`px-8 py-3.5 rounded-full text-xs font-semibold uppercase tracking-[0.2em] transition-all cursor-pointer whitespace-nowrap shadow-md ${
                 isDark
