@@ -84,7 +84,7 @@ function AppContent() {
       {/* Skip to Content for Accessibility */}
       <a
         href="#main-content"
-        className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 z-[999] px-4 py-2 bg-[#C5A059] text-black text-xs uppercase tracking-widest font-bold rounded shadow-lg"
+        className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 z-[999] px-4 py-2 bg-[#C5A059] text-black text-xs uppercase tracking-widest font-bold rounded"
       >
         Skip to main content
       </a>

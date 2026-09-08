@@ -213,7 +213,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate, onOpenReservatio
                     </span>
                   </div>
 
-                  <h1 className="hero-anim hero-anim-2 font-serif text-[2.6rem] leading-[1.08] sm:text-6xl lg:text-7xl font-bold text-[#F5EFE6] tracking-tight mb-6 drop-shadow-[0_2px_20px_rgba(0,0,0,0.5)]">
+                  <h1 className="hero-anim hero-anim-2 font-serif text-[2.6rem] leading-[1.08] sm:text-6xl lg:text-7xl font-bold text-[#F5EFE6] tracking-tight mb-6">
                     {slide.heading}
                   </h1>
 
@@ -224,7 +224,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate, onOpenReservatio
                   <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-5">
                     <button
                       onClick={() => runSlideAction(slide.primary)}
-                      className="hero-anim hero-anim-4 w-full sm:w-auto px-8 py-4 rounded-full text-xs font-semibold uppercase tracking-[0.22em] transition-all hover:-translate-y-0.5 hover:shadow-xl flex items-center justify-center gap-2 cursor-pointer group shadow-lg text-[#0C0D0E]"
+                      className="hero-anim hero-anim-4 w-full sm:w-auto px-8 py-4 rounded-full text-xs font-semibold uppercase tracking-[0.22em] transition-all hover:-translate-y-0.5 flex items-center justify-center gap-2 cursor-pointer group text-[#0C0D0E]"
                       style={{ backgroundColor: goldAccent }}
                     >
                       <Utensils className="w-4 h-4 transition-transform group-hover:rotate-12" />
@@ -432,7 +432,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate, onOpenReservatio
                   className={`inline-flex items-center gap-3 px-6 py-3.5 rounded-full border text-xs font-semibold uppercase tracking-[0.2em] transition-all hover:-translate-y-0.5 group cursor-pointer ${
                     isDark
                       ? 'border-[#C5A059]/60 hover:border-[#C5A059] bg-[#C5A059]/10 hover:bg-[#C5A059] text-[#EDE6D8] hover:text-[#0C0D0E]'
-                      : 'border-[#A67C00]/60 hover:border-[#A67C00] bg-[#A67C00]/10 hover:bg-[#A67C00] text-[#171717] hover:text-white shadow-sm'
+                      : 'border-[#A67C00]/60 hover:border-[#A67C00] bg-[#A67C00]/10 hover:bg-[#A67C00] text-[#171717] hover:text-white'
                   }`}
                 >
                   <span>Discover Our Story</span>
@@ -512,7 +512,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate, onOpenReservatio
 
                   {/* Price Badge */}
                   <div
-                    className="absolute top-3.5 right-3.5 px-3 py-1 rounded-full text-xs font-bold font-serif shadow-md"
+                    className="absolute top-3.5 right-3.5 px-3 py-1 rounded-full text-xs font-bold font-serif"
                     style={{
                       backgroundColor: goldAccent,
                       color: isDark ? '#0C0D0E' : '#FFFFFF',
@@ -584,7 +584,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate, onOpenReservatio
               className={`inline-flex items-center gap-3 px-8 py-4 rounded-full border text-xs font-semibold uppercase tracking-[0.2em] transition-all hover:-translate-y-0.5 cursor-pointer group ${
                 isDark
                   ? 'border-[#C5A059] bg-[#C5A059]/10 hover:bg-[#C5A059] text-[#EDE6D8] hover:text-[#0C0D0E]'
-                  : 'border-[#A67C00] bg-[#A67C00]/10 hover:bg-[#A67C00] text-[#171717] hover:text-white shadow-sm'
+                  : 'border-[#A67C00] bg-[#A67C00]/10 hover:bg-[#A67C00] text-[#171717] hover:text-white'
               }`}
             >
               <span>Explore Complete Menu &amp; Cellar Flight</span>
@@ -704,10 +704,10 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate, onOpenReservatio
             <button
               id="exp-reserve-btn"
               onClick={onOpenReservation}
-              className={`w-full sm:w-auto px-8 py-4 rounded-full text-xs font-semibold uppercase tracking-[0.2em] shadow-xl transition-all hover:-translate-y-0.5 cursor-pointer ${
+              className={`w-full sm:w-auto px-8 py-4 rounded-full text-xs font-semibold uppercase tracking-[0.2em] transition-all hover:-translate-y-0.5 cursor-pointer ${
                 isDark
-                  ? 'bg-[#C5A059] hover:bg-[#DFBF77] text-[#0C0D0E] shadow-[#C5A059]/20'
-                  : 'bg-[#A67C00] hover:bg-[#B8860B] text-white shadow-[#A67C00]/30'
+                  ? 'bg-[#C5A059] hover:bg-[#DFBF77] text-[#0C0D0E]'
+                  : 'bg-[#A67C00] hover:bg-[#B8860B] text-white'
               }`}
             >
               Book An Experience
@@ -921,10 +921,10 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate, onOpenReservatio
             <button
               id="cta-reserve-btn"
               onClick={onOpenReservation}
-              className={`w-full sm:w-auto px-9 py-4 rounded-full text-xs font-semibold uppercase tracking-[0.22em] transition-all hover:-translate-y-0.5 cursor-pointer shadow-lg ${
+              className={`w-full sm:w-auto px-9 py-4 rounded-full text-xs font-semibold uppercase tracking-[0.22em] transition-all hover:-translate-y-0.5 cursor-pointer ${
                 isDark
-                  ? 'bg-[#C5A059] hover:bg-[#DFBF77] text-[#0C0D0E] shadow-[#C5A059]/30 hover:shadow-[#C5A059]/50'
-                  : 'bg-[#A67C00] hover:bg-[#B8860B] text-white shadow-[#A67C00]/30 hover:shadow-[#A67C00]/50'
+                  ? 'bg-[#C5A059] hover:bg-[#DFBF77] text-[#0C0D0E]'
+                  : 'bg-[#A67C00] hover:bg-[#B8860B] text-white'
               }`}
             >
               Reserve Your Table
@@ -939,7 +939,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate, onOpenReservatio
               className={`w-full sm:w-auto px-8 py-4 rounded-full border text-xs font-semibold uppercase tracking-[0.22em] transition-all hover:-translate-y-0.5 cursor-pointer ${
                 isDark
                   ? 'border-[#2D3139] hover:border-[#C5A059] text-[#EDE6D8]'
-                  : 'border-[#D5CCBE] hover:border-[#A67C00] text-[#171717] bg-white/70 shadow-sm'
+                  : 'border-[#D5CCBE] hover:border-[#A67C00] text-[#171717] bg-white/70'
               }`}
             >
               Contact Concierge

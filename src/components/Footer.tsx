@@ -249,7 +249,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onOpenReservation })
                   className={`w-8 h-8 rounded-full border flex items-center justify-center transition-all ${
                     isDark
                       ? 'border-[#2A2E35] text-[#B8B0A2] hover:text-[#C5A059] hover:border-[#C5A059]'
-                      : 'border-[#D5CCBE] bg-white text-[#57534E] hover:text-[#A67C00] hover:border-[#A67C00] shadow-sm'
+                      : 'border-[#D5CCBE] bg-white text-[#57534E] hover:text-[#A67C00] hover:border-[#A67C00]'
                   }`}
                   aria-label="Instagram"
                 >
@@ -262,7 +262,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onOpenReservation })
                   className={`w-8 h-8 rounded-full border flex items-center justify-center transition-all ${
                     isDark
                       ? 'border-[#2A2E35] text-[#B8B0A2] hover:text-[#C5A059] hover:border-[#C5A059]'
-                      : 'border-[#D5CCBE] bg-white text-[#57534E] hover:text-[#A67C00] hover:border-[#A67C00] shadow-sm'
+                      : 'border-[#D5CCBE] bg-white text-[#57534E] hover:text-[#A67C00] hover:border-[#A67C00]'
                   }`}
                   aria-label="Facebook"
                 >
@@ -275,7 +275,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onOpenReservation })
                   className={`w-8 h-8 rounded-full border flex items-center justify-center transition-all ${
                     isDark
                       ? 'border-[#2A2E35] text-[#B8B0A2] hover:text-[#C5A059] hover:border-[#C5A059]'
-                      : 'border-[#D5CCBE] bg-white text-[#57534E] hover:text-[#A67C00] hover:border-[#A67C00] shadow-sm'
+                      : 'border-[#D5CCBE] bg-white text-[#57534E] hover:text-[#A67C00] hover:border-[#A67C00]'
                   }`}
                   aria-label="TikTok"
                 >

@@ -28,7 +28,7 @@ export const LoadingScreen: React.FC = () => {
     >
       <div className="flex flex-col items-center space-y-6">
         {/* Emblem */}
-        <div className="w-14 h-14 rounded-full border border-[#C5A059]/50 flex items-center justify-center bg-[#121316] shadow-[0_0_30px_rgba(197,160,89,0.2)]">
+        <div className="w-14 h-14 rounded-full border border-[#C5A059]/50 flex items-center justify-center bg-[#121316]">
           <span className="font-serif text-[#C5A059] text-2xl font-bold">M</span>
         </div>
 

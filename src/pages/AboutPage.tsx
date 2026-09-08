@@ -504,7 +504,7 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onNavigate, onOpenReservat
               id="about-reserve-btn"
               data-reveal="scale"
               onClick={onOpenReservation}
-              className={`px-8 py-3.5 rounded-full text-xs font-semibold uppercase tracking-[0.2em] transition-all hover:-translate-y-0.5 cursor-pointer whitespace-nowrap shadow-md ${
+              className={`px-8 py-3.5 rounded-full text-xs font-semibold uppercase tracking-[0.2em] transition-all hover:-translate-y-0.5 cursor-pointer whitespace-nowrap ${
                 isDark
                   ? 'bg-[#C5A059] hover:bg-[#DFBF77] text-[#0C0D0E]'
                   : 'bg-[#A67C00] hover:bg-[#B8860B] text-white'

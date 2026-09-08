@@ -214,10 +214,10 @@ export const ReservationModal: React.FC<ReservationModalProps> = ({
             <button
               id="finish-reservation-btn"
               onClick={handleResetAndClose}
-              className={`px-8 py-3 rounded-full text-xs font-semibold uppercase tracking-[0.2em] transition-all cursor-pointer shadow-lg ${
+              className={`px-8 py-3 rounded-full text-xs font-semibold uppercase tracking-[0.2em] transition-all cursor-pointer ${
                 isDark
-                  ? 'bg-[#C5A059] hover:bg-[#DFBF77] text-[#0C0D0E] shadow-[#C5A059]/20'
-                  : 'bg-[#A67C00] hover:bg-[#B8860B] text-white shadow-[#A67C00]/20'
+                  ? 'bg-[#C5A059] hover:bg-[#DFBF77] text-[#0C0D0E]'
+                  : 'bg-[#A67C00] hover:bg-[#B8860B] text-white'
               }`}
             >
               Done
@@ -361,8 +361,8 @@ export const ReservationModal: React.FC<ReservationModalProps> = ({
                         className={`text-left p-3 rounded-lg border transition-all cursor-pointer ${
                           isSelected
                             ? isDark
-                              ? 'bg-[#C5A059]/15 border-[#C5A059] text-[#EDE6D8] shadow-[0_0_12px_rgba(197,160,89,0.2)]'
-                              : 'bg-[#A67C00]/10 border-[#A67C00] text-[#171717] shadow-sm'
+                              ? 'bg-[#C5A059]/15 border-[#C5A059] text-[#EDE6D8]'
+                              : 'bg-[#A67C00]/10 border-[#A67C00] text-[#171717]'
                             : isDark
                             ? 'bg-[#16181D] border-[#252932] text-[#B8B0A2] hover:border-[#3E434D]'
                             : 'bg-[#F9F7F2] border-[#E2D9CA] text-[#57534E] hover:border-[#A67C00]'
@@ -487,10 +487,10 @@ export const ReservationModal: React.FC<ReservationModalProps> = ({
                   id="confirm-reservation-btn"
                   type="submit"
                   disabled={isSubmitting}
-                  className={`w-full py-3.5 rounded-full font-semibold text-xs uppercase tracking-[0.2em] transition-all shadow-lg flex items-center justify-center gap-2 cursor-pointer disabled:opacity-50 ${
+                  className={`w-full py-3.5 rounded-full font-semibold text-xs uppercase tracking-[0.2em] transition-all flex items-center justify-center gap-2 cursor-pointer disabled:opacity-50 ${
                     isDark
-                      ? 'bg-[#C5A059] hover:bg-[#DFBF77] text-[#0C0D0E] shadow-[#C5A059]/20 hover:shadow-[#C5A059]/40'
-                      : 'bg-[#A67C00] hover:bg-[#B8860B] text-white shadow-[#A67C00]/20 hover:shadow-[#A67C00]/40'
+                      ? 'bg-[#C5A059] hover:bg-[#DFBF77] text-[#0C0D0E]'
+                      : 'bg-[#A67C00] hover:bg-[#B8860B] text-white'
                   }`}
                 >
                   {isSubmitting ? (

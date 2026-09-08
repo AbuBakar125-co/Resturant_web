@@ -80,8 +80,8 @@ export const Header: React.FC<HeaderProps> = ({
           <div
             className={`w-9 h-9 rounded-full border flex items-center justify-center transition-all duration-300 ${
               isScrolled && !isDark
-                ? 'border-[#A67C00]/40 bg-[#FAF8F3] group-hover:border-[#A67C00] shadow-sm'
-                : 'border-[#C5A059]/40 bg-[#141518]/70 group-hover:border-[#C5A059] group-hover:shadow-[0_0_15px_rgba(197,160,89,0.3)]'
+                ? 'border-[#A67C00]/40 bg-[#FAF8F3] group-hover:border-[#A67C00]'
+                : 'border-[#C5A059]/40 bg-[#141518]/70 group-hover:border-[#C5A059]'
             }`}
           >
             <span
@@ -128,10 +128,7 @@ export const Header: React.FC<HeaderProps> = ({
                 {isActive && (
                   <span
                     className="absolute bottom-0 left-0 w-full h-[2px] rounded-full"
-                    style={{
-                      backgroundColor: goldAccent,
-                      boxShadow: `0 0 8px ${goldAccent}`,
-                    }}
+                    style={{ backgroundColor: goldAccent }}
                   />
                 )}
               </button>
@@ -150,8 +147,8 @@ export const Header: React.FC<HeaderProps> = ({
             onClick={onOpenReservation}
             className={`relative group overflow-hidden px-5 py-2.5 rounded-full border text-xs font-semibold uppercase tracking-[0.18em] transition-all duration-300 flex items-center gap-2 cursor-pointer ${
               isDark
-                ? 'border-[#C5A059] bg-[#C5A059]/10 hover:bg-[#C5A059] text-[#EDE6D8] hover:text-[#0C0D0E] shadow-[0_0_15px_rgba(197,160,89,0.15)] hover:shadow-[0_0_25px_rgba(197,160,89,0.4)]'
-                : 'border-[#A67C00] bg-[#A67C00] hover:bg-[#B8860B] text-[#FFFFFF] shadow-md shadow-[#A67C00]/20'
+                ? 'border-[#C5A059] bg-[#C5A059]/10 hover:bg-[#C5A059] text-[#EDE6D8] hover:text-[#0C0D0E]'
+                : 'border-[#A67C00] bg-[#A67C00] hover:bg-[#B8860B] text-[#FFFFFF]'
             }`}
           >
             <Calendar className="w-3.5 h-3.5 transition-transform group-hover:scale-110" />
@@ -237,10 +234,10 @@ export const Header: React.FC<HeaderProps> = ({
                   setMobileMenuOpen(false);
                   onOpenReservation();
                 }}
-                className={`w-full py-3 rounded-full font-semibold text-xs uppercase tracking-[0.2em] shadow-lg flex items-center justify-center gap-2 cursor-pointer ${
+                className={`w-full py-3 rounded-full font-semibold text-xs uppercase tracking-[0.2em] flex items-center justify-center gap-2 cursor-pointer ${
                   isDark
-                    ? 'bg-[#C5A059] text-[#0C0D0E] shadow-[#C5A059]/20'
-                    : 'bg-[#A67C00] text-white shadow-[#A67C00]/20'
+                    ? 'bg-[#C5A059] text-[#0C0D0E]'
+                    : 'bg-[#A67C00] text-white'
                 }`}
               >
                 <Calendar className="w-4 h-4" />

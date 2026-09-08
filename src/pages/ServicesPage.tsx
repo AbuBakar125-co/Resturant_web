@@ -287,7 +287,7 @@ export const ServicesPage: React.FC<ServicesPageProps> = ({ onNavigate, onOpenRe
                   onNavigate('contact');
                   window.scrollTo({ top: 0, behavior: 'smooth' });
                 }}
-                className={`w-full sm:w-auto px-6 py-3.5 rounded-full text-xs font-semibold uppercase tracking-wider transition-all cursor-pointer whitespace-nowrap shadow-md ${
+                className={`w-full sm:w-auto px-6 py-3.5 rounded-full text-xs font-semibold uppercase tracking-wider transition-all cursor-pointer whitespace-nowrap ${
                   isDark
                     ? 'bg-[#C5A059] hover:bg-[#DFBF77] text-[#0C0D0E]'
                     : 'bg-[#A67C00] hover:bg-[#B8860B] text-white'
@@ -400,7 +400,7 @@ export const ServicesPage: React.FC<ServicesPageProps> = ({ onNavigate, onOpenRe
                     setSelectedService(null);
                     onOpenReservation();
                   }}
-                  className={`flex-1 py-3 rounded-full font-semibold text-xs uppercase tracking-wider transition-all cursor-pointer text-center shadow-md ${
+                  className={`flex-1 py-3 rounded-full font-semibold text-xs uppercase tracking-wider transition-all cursor-pointer text-center ${
                     isDark
                       ? 'bg-[#C5A059] hover:bg-[#DFBF77] text-[#0C0D0E]'
                       : 'bg-[#A67C00] hover:bg-[#B8860B] text-white'

@@ -28,7 +28,7 @@ export const ThemeToggle: React.FC<ThemeToggleProps> = ({
         className={`flex items-center gap-2.5 px-3.5 py-2 rounded-full border transition-all duration-300 cursor-pointer focus:outline-none focus:ring-2 focus:ring-[#C5A059] ${
           isDark
             ? 'border-[#2D3139] bg-[#16181C] text-[#EDE6D8] hover:border-[#C5A059] hover:bg-[#1E2127]'
-            : 'border-[#D9D2C5] bg-[#FFFFFF] text-[#171717] hover:border-[#A67C00] hover:bg-[#F5EFE6] shadow-sm'
+            : 'border-[#D9D2C5] bg-[#FFFFFF] text-[#171717] hover:border-[#A67C00] hover:bg-[#F5EFE6]'
         } ${className}`}
       >
         <div className="relative w-4 h-4 flex items-center justify-center">
@@ -54,8 +54,8 @@ export const ThemeToggle: React.FC<ThemeToggleProps> = ({
       title={label}
       className={`relative p-2.5 rounded-full border transition-all duration-300 cursor-pointer focus:outline-none focus:ring-2 focus:ring-[#C5A059] group flex items-center justify-center ${
         isDark
-          ? 'border-[#2D313A] bg-[#14161A]/80 text-[#C5A059] hover:border-[#C5A059] hover:bg-[#1E2128] shadow-[0_0_12px_rgba(197,160,89,0.15)]'
-          : 'border-[#D9D2C5] bg-[#FFFFFF] text-[#A67C00] hover:border-[#A67C00] hover:bg-[#F3EFE6] shadow-md shadow-black/5'
+          ? 'border-[#2D313A] bg-[#14161A]/80 text-[#C5A059] hover:border-[#C5A059] hover:bg-[#1E2128]'
+          : 'border-[#D9D2C5] bg-[#FFFFFF] text-[#A67C00] hover:border-[#A67C00] hover:bg-[#F3EFE6]'
       } ${className}`}
     >
       <div className="relative w-4 h-4 flex items-center justify-center overflow-hidden">

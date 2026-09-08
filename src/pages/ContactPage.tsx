@@ -608,10 +608,10 @@ export const ContactPage: React.FC<ContactPageProps> = () => {
                         id="contact-form-submit"
                         type="submit"
                         disabled={isSubmitting}
-                        className={`w-full py-4 rounded-full font-semibold text-xs uppercase tracking-[0.2em] transition-all hover:-translate-y-0.5 shadow-lg flex items-center justify-center gap-2 cursor-pointer disabled:opacity-50 disabled:hover:translate-y-0 ${
+                        className={`w-full py-4 rounded-full font-semibold text-xs uppercase tracking-[0.2em] transition-all hover:-translate-y-0.5 flex items-center justify-center gap-2 cursor-pointer disabled:opacity-50 disabled:hover:translate-y-0 ${
                           isDark
-                            ? 'bg-[#C5A059] hover:bg-[#DFBF77] text-[#0C0D0E] shadow-[#C5A059]/20 hover:shadow-[#C5A059]/40'
-                            : 'bg-[#A67C00] hover:bg-[#B8860B] text-white shadow-[#A67C00]/20'
+                            ? 'bg-[#C5A059] hover:bg-[#DFBF77] text-[#0C0D0E]'
+                            : 'bg-[#A67C00] hover:bg-[#B8860B] text-white'
                         }`}
                       >
                         {isSubmitting ? (

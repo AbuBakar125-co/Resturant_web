@@ -490,14 +490,14 @@ img[data-img-anim][data-img-revealed][data-img-done] {
 }
 
 /* --- Elegant focus state for every form control ------------------------ */
+/* Border-color only: no glow/ring, per the site's flat-text design rule. */
 main input:focus,
 main select:focus,
 main textarea:focus,
 #reservation-modal-content input:focus,
 #reservation-modal-content select:focus,
 #reservation-modal-content textarea:focus {
-  box-shadow: 0 0 0 3px var(--color-gold-bg);
-  transition: box-shadow 250ms ease, border-color 250ms ease;
+  transition: border-color 250ms ease;
 }
 
 /* --- Scroll progress bar ------------------------------------------------ */

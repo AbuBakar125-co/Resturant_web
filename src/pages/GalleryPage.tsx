@@ -121,8 +121,8 @@ export const GalleryPage: React.FC<GalleryPageProps> = ({ onOpenReservation }) =
                 className={`px-4 py-2 rounded-full text-xs uppercase tracking-wider font-sans font-medium transition-all cursor-pointer whitespace-nowrap ${
                   isActive
                     ? isDark
-                      ? 'bg-[#C5A059] text-[#0C0D0E] font-bold shadow-[0_0_15px_rgba(197,160,89,0.3)]'
-                      : 'bg-[#A67C00] text-white font-bold shadow-md'
+                      ? 'bg-[#C5A059] text-[#0C0D0E] font-bold'
+                      : 'bg-[#A67C00] text-white font-bold'
                     : isDark
                     ? 'bg-[#131518] text-[#B8B0A2] hover:text-[#EDE6D8] hover:bg-[#1A1C20] border border-[#23272F]'
                     : 'bg-white text-[#78716C] hover:text-[#171717] hover:bg-[#F4EFE6] border border-[#E2D9CA]'
@@ -202,7 +202,7 @@ export const GalleryPage: React.FC<GalleryPageProps> = ({ onOpenReservation }) =
             <button
               id="gallery-reserve-btn"
               onClick={onOpenReservation}
-              className={`px-8 py-3.5 rounded-full text-xs font-semibold uppercase tracking-[0.2em] transition-all cursor-pointer shadow-md ${
+              className={`px-8 py-3.5 rounded-full text-xs font-semibold uppercase tracking-[0.2em] transition-all cursor-pointer ${
                 isDark
                   ? 'bg-[#C5A059] hover:bg-[#DFBF77] text-[#0C0D0E]'
                   : 'bg-[#A67C00] hover:bg-[#B8860B] text-white'
